@@ -1,43 +1,85 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, Clock } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 import heroImg from "@/assets/hero-construction.jpg";
+import { useState } from "react";
 
-const Navbar = () => (
-  <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-dark/95 backdrop-blur-sm">
-    <div className="container mx-auto flex items-center justify-between py-3 px-4">
-      <div className="flex items-center gap-2">
-        <div className="w-16 h-16">
-          {/* logo file placed in public/ as logo.png */}
-          <img
-            src="/logo.png"
-            alt="CIL Contractors logo"
-            className="w-full h-full object-contain"
-          />
+const navLinks = [
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About Us" },
+  { href: "#services", label: "Services" },
+  { href: "#projects", label: "Projects" },
+  { href: "#contact", label: "Contact Us" },
+];
+
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-dark/95 backdrop-blur-sm">
+      <div className="container mx-auto flex items-center justify-between py-3 px-4">
+        <div className="flex items-center gap-2">
+          <div className="w-12 h-12 sm:w-16 sm:h-16">
+            <img
+              src="/logo.png"
+              alt="CIL Contractors logo"
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <div>
+            <p className="font-heading font-bold text-primary text-sm sm:text-lg leading-tight">CIL CONTRACTORS LTD</p>
+            <p className="text-slate-dark-foreground/70 text-[10px] sm:text-xs italic hidden sm:block">"The Best Need Not Be Expensive"</p>
+          </div>
         </div>
-        <div className="hidden sm:block">
-          <p className="font-heading font-bold text-primary text-lg leading-tight">CIL CONTRACTORS LTD</p>
-          <p className="text-slate-dark-foreground/70 text-xs italic">"The Best Need Not Be Expensive"</p>
+        <div className="hidden md:flex items-center gap-8 text-slate-dark-foreground/80 text-sm font-medium">
+          {navLinks.map((l) => (
+            <a key={l.href} href={l.href} className="hover:text-primary transition-colors">{l.label}</a>
+          ))}
+        </div>
+        <div className="flex items-center gap-3">
+          <a href="tel:+254788281815" className="hidden sm:flex items-center gap-1.5 text-slate-dark-foreground/70 text-xs">
+            <Phone className="w-3.5 h-3.5" />
+            +254 788 281 815
+          </a>
+          <Button variant="hero" size="sm" asChild className="hidden sm:inline-flex">
+            <a href="#contact">Get Quote</a>
+          </Button>
+          <button
+            onClick={() => setOpen(!open)}
+            className="md:hidden text-slate-dark-foreground p-1.5"
+            aria-label="Toggle menu"
+          >
+            {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
       </div>
-      <div className="hidden md:flex items-center gap-8 text-slate-dark-foreground/80 text-sm font-medium">
-        <a href="#home" className="hover:text-primary transition-colors">Home</a>
-        <a href="#about" className="hover:text-primary transition-colors">About Us</a>
-        <a href="#services" className="hover:text-primary transition-colors">Services</a>
-        <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
-        <a href="#contact" className="hover:text-primary transition-colors">Contact Us</a>
-      </div>
-      <div className="flex items-center gap-3">
-        <a href="tel:+254788281815" className="hidden sm:flex items-center gap-1.5 text-slate-dark-foreground/70 text-xs">
-          <Phone className="w-3.5 h-3.5" />
-          +254 788 281 815
-        </a>
-        <Button variant="hero" size="sm" asChild>
-          <a href="#contact">Get Quote</a>
-        </Button>
-      </div>
-    </div>
-  </nav>
-);
+
+      {/* Mobile menu */}
+      {open && (
+        <div className="md:hidden bg-slate-dark/95 border-t border-slate-dark-foreground/10 px-4 pb-4 pt-2 animate-fade-up">
+          <div className="flex flex-col gap-3">
+            {navLinks.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className="text-slate-dark-foreground/80 hover:text-primary transition-colors text-sm font-medium py-1"
+              >
+                {l.label}
+              </a>
+            ))}
+            <a href="tel:+254788281815" className="flex items-center gap-1.5 text-slate-dark-foreground/70 text-xs py-1">
+              <Phone className="w-3.5 h-3.5" />
+              +254 788 281 815
+            </a>
+            <Button variant="hero" size="sm" asChild className="w-full mt-1">
+              <a href="#contact" onClick={() => setOpen(false)}>Get Quote</a>
+            </Button>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+};
 
 const HeroSection = () => (
   <section id="home" className="relative min-h-[90vh] flex items-center overflow-hidden">
