@@ -31,7 +31,7 @@ const MarqueeRow = ({
         {items.map((logo, i) => (
           <div
             key={i}
-            className="flex items-center justify-center h-16 w-40 shrink-0 grayscale hover:grayscale-0 transition-all duration-300"
+            className="flex items-center justify-center h-16 w-40 shrink-0 transition-all duration-300"
           >
             <img
               src={logo.src}
