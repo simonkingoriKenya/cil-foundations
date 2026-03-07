@@ -6,12 +6,16 @@ const Footer = () => (
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-10 h-10 rounded bg-primary flex items-center justify-center font-heading font-bold text-primary-foreground text-lg">
-              CIL
+            <div className="w-12 h-12">
+              <img
+                src="/logo.png"
+                alt="CIL Contractors logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
-              <p className="font-heading font-bold text-slate-dark-foreground text-sm leading-tight">CIL Contractors</p>
-              <p className="text-slate-dark-foreground/50 text-xs">Ltd</p>
+              <p className="font-heading font-bold text-primary text-base leading-tight">CIL CONTRACTORS LTD</p>
+              <p className="text-slate-dark-foreground/70 text-xs italic">"The Best Need Not Be Expensive"</p>
             </div>
           </div>
           <p className="text-slate-dark-foreground/60 text-sm leading-relaxed">
@@ -49,7 +53,7 @@ const Footer = () => (
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4 text-primary" />
-              <span>Nairobi, Kenya</span>
+              <span>2nd Floor Karen Plains Arcade<br />Along Karen Plains Road<br />P.O. Box 9088-00100 Nairobi</span>
             </div>
           </div>
         </div>

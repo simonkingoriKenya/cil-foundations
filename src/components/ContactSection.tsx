@@ -57,7 +57,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-heading font-semibold text-foreground text-sm">Address</p>
-                  <p className="text-muted-foreground text-sm">P.O BOX 9088-00100, Nairobi, Kenya</p>
+                  <p className="text-muted-foreground text-sm">2nd Floor Karen Plains Arcade<br />Along Karen Plains Road<br />P.O. Box 9088-00100 Nairobi</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">

@@ -34,27 +34,39 @@ const services = [
 ];
 
 const ServicesSection = () => (
-  <section id="services" className="py-24 bg-background">
+  <section id="services" className="py-32 bg-gradient-to-b from-background to-muted/30">
     <div className="container mx-auto px-4">
-      <div className="text-center mb-16">
-        <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-3">
+      <div className="text-center mb-20">
+        <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-4">
           What We Do
         </p>
-        <h2 className="font-heading font-bold text-3xl sm:text-4xl text-foreground">
-          Comprehensive Construction Services
+        <h2 className="font-heading font-bold text-4xl sm:text-5xl text-foreground mb-6">
+          Comprehensive Construction Solutions
         </h2>
+        <p className="text-foreground/70 max-w-2xl mx-auto text-lg">
+          From concept to completion, we deliver excellence across all construction disciplines
+        </p>
       </div>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {services.map((service) => (
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service, idx) => (
           <div
             key={service.title}
-            className="group bg-card rounded-lg p-8 border border-border hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+            className="group relative bg-white border-2 border-slate-200 rounded-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer overflow-hidden"
           >
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
-              <service.icon className="w-6 h-6 text-primary" />
+            {/* Card Content */}
+            <div className="relative z-10">
+              <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mb-6 group-hover:bg-primary/90 transition-all duration-300">
+                <service.icon className="w-7 h-7 text-white" />
+              </div>
+              
+              <h3 className="font-heading font-bold text-xl text-slate-900 mb-3 group-hover:text-primary transition-colors duration-300">
+                {service.title}
+              </h3>
+              
+              <p className="text-slate-700 text-base leading-relaxed group-hover:text-slate-800 transition-colors duration-300">
+                {service.description}
+              </p>
             </div>
-            <h3 className="font-heading font-semibold text-lg text-card-foreground mb-2">{service.title}</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
           </div>
         ))}
       </div>

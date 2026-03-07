@@ -6,19 +6,25 @@ const Navbar = () => (
   <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-dark/95 backdrop-blur-sm">
     <div className="container mx-auto flex items-center justify-between py-3 px-4">
       <div className="flex items-center gap-2">
-        <div className="w-10 h-10 rounded bg-primary flex items-center justify-center font-heading font-bold text-primary-foreground text-lg">
-          CIL
+        <div className="w-16 h-16">
+          {/* logo file placed in public/ as logo.png */}
+          <img
+            src="/logo.png"
+            alt="CIL Contractors logo"
+            className="w-full h-full object-contain"
+          />
         </div>
         <div className="hidden sm:block">
-          <p className="font-heading font-bold text-slate-dark-foreground text-sm leading-tight">CIL Contractors</p>
-          <p className="text-slate-dark-foreground/60 text-xs">Ltd</p>
+          <p className="font-heading font-bold text-primary text-lg leading-tight">CIL CONTRACTORS LTD</p>
+          <p className="text-slate-dark-foreground/70 text-xs italic">"The Best Need Not Be Expensive"</p>
         </div>
       </div>
       <div className="hidden md:flex items-center gap-8 text-slate-dark-foreground/80 text-sm font-medium">
+        <a href="#home" className="hover:text-primary transition-colors">Home</a>
+        <a href="#about" className="hover:text-primary transition-colors">About Us</a>
         <a href="#services" className="hover:text-primary transition-colors">Services</a>
         <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
-        <a href="#about" className="hover:text-primary transition-colors">About</a>
-        <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+        <a href="#contact" className="hover:text-primary transition-colors">Contact Us</a>
       </div>
       <div className="flex items-center gap-3">
         <a href="tel:+254788281815" className="hidden sm:flex items-center gap-1.5 text-slate-dark-foreground/70 text-xs">
@@ -34,7 +40,7 @@ const Navbar = () => (
 );
 
 const HeroSection = () => (
-  <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+  <section id="home" className="relative min-h-[90vh] flex items-center overflow-hidden">
     <div className="absolute inset-0">
       <img src={heroImg} alt="Construction site in Nairobi" className="w-full h-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-r from-slate-dark/90 via-slate-dark/70 to-slate-dark/40" />
