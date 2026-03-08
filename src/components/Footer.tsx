@@ -10,6 +10,7 @@ const Footer = () => (
               <img
                 src="/logo.png"
                 alt="CIL Contractors logo"
+                loading="lazy"
                 className="w-full h-full object-contain"
               />
             </div>
