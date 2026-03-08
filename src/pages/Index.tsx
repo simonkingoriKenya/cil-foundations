@@ -32,6 +32,7 @@ const Index = () => {
         <ScrollSection><ContactSection /></ScrollSection>
       </main>
       <Footer />
+      <BackToTop />
     </>
   );
 };
