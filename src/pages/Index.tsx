@@ -6,6 +6,16 @@ import ClientsSection from "@/components/ClientsSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
+const ScrollSection = ({ children }: { children: React.ReactNode }) => {
+  const { ref, isVisible } = useScrollAnimation(0.1);
+  return (
+    <div ref={ref} className={`scroll-fade-in ${isVisible ? "visible" : ""}`}>
+      {children}
+    </div>
+  );
+};
 
 const Index = () => {
   return (
@@ -13,12 +23,12 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
-        <AboutSection />
-        <ServicesSection />
-        <MethodologySection />
-        <ProjectsSection />
-        <ClientsSection />
-        <ContactSection />
+        <ScrollSection><AboutSection /></ScrollSection>
+        <ScrollSection><ServicesSection /></ScrollSection>
+        <ScrollSection><MethodologySection /></ScrollSection>
+        <ScrollSection><ProjectsSection /></ScrollSection>
+        <ScrollSection><ClientsSection /></ScrollSection>
+        <ScrollSection><ContactSection /></ScrollSection>
       </main>
       <Footer />
     </>
