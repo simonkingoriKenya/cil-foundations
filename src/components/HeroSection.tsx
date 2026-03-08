@@ -30,7 +30,7 @@ const Navbar = () => {
             <p className="text-slate-dark-foreground/70 text-[10px] sm:text-xs italic hidden sm:block">"The Best Need Not Be Expensive"</p>
           </div>
         </div>
-        <div className="hidden md:flex items-center gap-8 text-slate-dark-foreground/80 text-sm font-medium">
+        <div className="hidden lg:flex items-center gap-8 text-slate-dark-foreground/80 text-sm font-medium">
           {navLinks.map((l) => (
             <a key={l.href} href={l.href} className="hover:text-primary transition-colors">{l.label}</a>
           ))}
