@@ -4,6 +4,9 @@ const row1 = [
   { src: "/clients/nakuru.png", alt: "Nakuru County" },
   { src: "/clients/kiambu.png", alt: "Kiambu County" },
   { src: "/clients/makini.jpg", alt: "Makini Schools" },
+  { src: "/clients/konza.jpg", alt: "Konza Technopolis" },
+  { src: "/clients/mombasa-cement.jpeg", alt: "Mombasa Cement" },
+  { src: "/clients/liza-heights.png", alt: "Liza Heights" },
 ];
 
 const row2 = [
@@ -12,6 +15,9 @@ const row2 = [
   { src: "/clients/gok.png", alt: "Government of Kenya" },
   { src: "/clients/kenha.jpeg", alt: "KeNHA" },
   { src: "/clients/pmalliance.png", alt: "PM Alliance" },
+  { src: "/clients/osotua.png", alt: "Osotua Luxury Resort" },
+  { src: "/clients/tatu-city.png", alt: "Tatu City" },
+  { src: "/clients/bimcost.png", alt: "BimCost Management Solutions" },
 ];
 
 const MarqueeRow = ({
