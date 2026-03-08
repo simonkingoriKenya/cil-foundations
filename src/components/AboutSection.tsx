@@ -80,15 +80,10 @@ const AboutSection = () => (
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 gap-6">
-          {stats.map((stat, idx) => (
-            <div
-              key={idx}
-              className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-8 text-center hover:border-primary/40 transition-colors"
-            >
-              <p className="font-heading font-bold text-3xl sm:text-4xl text-primary mb-2">{stat.number}</p>
-              <p className="text-muted-foreground text-sm font-medium">{stat.label}</p>
-            </div>
-          ))}
+          <AnimatedStat number={500} label="Projects Completed" suffix="+" />
+          <AnimatedStat number={15} label="Years of Excellence" suffix="+" />
+          <AnimatedStat number={6} label="Countries Served" />
+          <AnimatedStat number={100} label="Client Satisfaction" suffix="%" />
         </div>
       </div>
 
