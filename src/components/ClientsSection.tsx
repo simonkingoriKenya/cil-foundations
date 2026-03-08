@@ -36,6 +36,7 @@ const MarqueeRow = ({
             <img
               src={logo.src}
               alt={logo.alt}
+              loading="lazy"
               className="max-h-full max-w-full object-contain"
             />
           </div>
