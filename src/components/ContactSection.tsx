@@ -80,31 +80,31 @@ const ContactSection = () => {
               </div>
             </div>
           </div>
-          <form onSubmit={handleSubmit} className="bg-card border border-border rounded-lg p-8 space-y-5">
+          <form ref={formRef} onSubmit={handleSubmit} className="bg-card border border-border rounded-lg p-8 space-y-5">
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
                 <label className="text-sm font-medium text-foreground mb-1.5 block">Full Name</label>
-                <Input required placeholder="John Mwangi" className="bg-background" />
+                <Input name="name" required placeholder="John Mwangi" className="bg-background" />
               </div>
               <div>
                 <label className="text-sm font-medium text-foreground mb-1.5 block">Phone Number</label>
-                <Input required placeholder="+254 7XX XXX XXX" className="bg-background" />
+                <Input name="phone" required placeholder="+254 7XX XXX XXX" className="bg-background" />
               </div>
             </div>
             <div>
               <label className="text-sm font-medium text-foreground mb-1.5 block">Email Address</label>
-              <Input required type="email" placeholder="john@example.com" className="bg-background" />
+              <Input name="email" required type="email" placeholder="john@example.com" className="bg-background" />
             </div>
             <div>
               <label className="text-sm font-medium text-foreground mb-1.5 block">Project Type</label>
-              <Input required placeholder="e.g. Office Block, Road Construction, Warehouse" className="bg-background" />
+              <Input name="projectType" required placeholder="e.g. Office Block, Road Construction, Warehouse" className="bg-background" />
             </div>
             <div>
               <label className="text-sm font-medium text-foreground mb-1.5 block">Project Details</label>
-              <Textarea required rows={4} placeholder="Describe your project scope, location, and timeline..." className="bg-background resize-none" />
+              <Textarea name="details" required rows={4} placeholder="Describe your project scope, location, and timeline..." className="bg-background resize-none" />
             </div>
-            <Button type="submit" variant="steel" size="lg" className="w-full" disabled={loading}>
-              {loading ? "Submitting..." : "Submit Quote Request"}
+            <Button type="submit" variant="steel" size="lg" className="w-full">
+              Submit Quote Request
             </Button>
           </form>
         </div>
