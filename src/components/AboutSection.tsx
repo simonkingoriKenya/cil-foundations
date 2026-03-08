@@ -82,7 +82,7 @@ const AboutSection = () => (
           <h3 className="font-heading font-bold text-3xl text-foreground">Our Core Values</h3>
           <p className="text-muted-foreground mt-3">The principles that guide every decision and every project</p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
           {values.map((v) => (
             <div
               key={v.title}
