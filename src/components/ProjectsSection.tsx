@@ -92,7 +92,7 @@ const ProjectsSection = () => {
           </h2>
         </div>
         <Tabs defaultValue="residential" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 mb-8">
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-7 mb-8">
             <TabsTrigger value="residential">Residential</TabsTrigger>
             <TabsTrigger value="hospitality">Hospitality</TabsTrigger>
             <TabsTrigger value="institutional">Institutional</TabsTrigger>
