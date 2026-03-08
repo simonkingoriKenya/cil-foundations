@@ -30,17 +30,9 @@ const expertise = [
   { icon: Globe, title: "Regional Reach", desc: "Operations spanning Kenya and East Africa" },
 ];
 
-const expertise = [
-  { icon: Hammer, title: "Building Construction", desc: "High-rise offices, residential estates, commercial complexes" },
-  { icon: Zap, title: "Civil Engineering", desc: "Roads, water systems, drainage, infrastructure projects" },
-  { icon: Award, title: "Quality Assurance", desc: "Rigorous standards & compliance across all projects" },
-  { icon: Globe, title: "Regional Reach", desc: "Operations spanning Kenya and East Africa" },
-];
-
 const AboutSection = () => (
   <section id="about" className="py-32 bg-background">
     <div className="container mx-auto px-4">
-      {/* Header Section */}
       <div className="text-center mb-20">
         <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-4">
           Our Story
@@ -53,7 +45,6 @@ const AboutSection = () => (
         </p>
       </div>
 
-      {/* Main Content Grid */}
       <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
         <div>
           <div className="space-y-6">
@@ -78,7 +69,6 @@ const AboutSection = () => (
           </div>
         </div>
 
-        {/* Stats Section */}
         <div className="grid grid-cols-2 gap-6">
           <AnimatedStat number={500} label="Projects Completed" suffix="+" />
           <AnimatedStat number={15} label="Years of Excellence" suffix="+" />
@@ -87,7 +77,6 @@ const AboutSection = () => (
         </div>
       </div>
 
-      {/* Core Values Section */}
       <div className="mb-20">
         <div className="text-center mb-12">
           <h3 className="font-heading font-bold text-3xl text-foreground">Our Core Values</h3>
@@ -109,7 +98,6 @@ const AboutSection = () => (
         </div>
       </div>
 
-      {/* Expertise Highlights */}
       <div className="bg-muted/50 rounded-2xl p-12">
         <h3 className="font-heading font-bold text-3xl text-foreground mb-12 text-center">Our Expertise</h3>
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
