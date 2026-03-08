@@ -96,40 +96,40 @@ const MethodologySection = () => (
 
       {/* Graphical Timeline */}
       <div className="max-w-5xl mx-auto relative">
-        {/* Central Timeline Line - hidden on mobile */}
-        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-primary via-primary/60 to-primary/20 h-full rounded-full shadow-lg">
+        {/* Central Timeline Line - hidden on mobile/tablet */}
+        <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-primary via-primary/60 to-primary/20 h-full rounded-full shadow-lg">
           <div className="absolute inset-0 bg-gradient-to-b from-primary/50 to-transparent animate-pulse rounded-full" />
         </div>
 
-        {/* Mobile: left line */}
-        <div className="md:hidden absolute left-6 w-1 bg-gradient-to-b from-primary via-primary/60 to-primary/20 h-full rounded-full shadow-lg" />
+        {/* Mobile/tablet: left line */}
+        <div className="lg:hidden absolute left-6 w-1 bg-gradient-to-b from-primary via-primary/60 to-primary/20 h-full rounded-full shadow-lg" />
 
-        <div className="space-y-8 md:space-y-16">
+        <div className="space-y-8 lg:space-y-16">
           {processes.map((process, idx) => (
-            <div key={idx} className={`relative flex items-center md:${idx % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+            <div key={idx} className={`relative flex items-center ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
               {/* Timeline Node - desktop centered */}
-              <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 z-20">
+              <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 z-20">
                 <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${process.color} border-4 border-white shadow-2xl flex items-center justify-center transform hover:scale-110 transition-transform duration-300`}>
                   <span className="font-heading font-bold text-xl text-white">{process.step}</span>
                 </div>
                 <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${process.color} opacity-30 blur-md animate-pulse`} />
               </div>
 
-              {/* Timeline Node - mobile left */}
-              <div className="md:hidden absolute left-6 transform -translate-x-1/2 z-20">
-                <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${process.color} border-2 border-white shadow-xl flex items-center justify-center`}>
-                  <span className="font-heading font-bold text-sm text-white">{process.step}</span>
+              {/* Timeline Node - mobile/tablet left */}
+              <div className="lg:hidden absolute left-6 transform -translate-x-1/2 z-20">
+                <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br ${process.color} border-2 border-white shadow-xl flex items-center justify-center`}>
+                  <span className="font-heading font-bold text-sm md:text-base text-white">{process.step}</span>
                 </div>
               </div>
 
-              {/* Content Card - mobile full width with left padding */}
-              <div className={`w-full pl-14 md:pl-0 md:w-5/12 ${idx % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}`}>
-                <div className={`${process.bgColor} border border-white/10 rounded-2xl p-5 md:p-8 backdrop-blur-sm hover:border-white/20 transition-all duration-300 shadow-2xl transform hover:-translate-y-1`}>
-                  <div className={`inline-flex items-center justify-center w-10 h-10 md:w-14 md:h-14 rounded-xl bg-gradient-to-br ${process.color} mb-3 md:mb-4 ${idx % 2 === 0 ? 'md:ml-auto' : 'md:mr-auto'}`}>
-                    <process.icon className="w-5 h-5 md:w-7 md:h-7 text-white" />
+              {/* Content Card */}
+              <div className={`w-full pl-14 md:pl-16 lg:pl-0 lg:w-5/12 ${idx % 2 === 0 ? 'lg:pr-12 lg:text-right' : 'lg:pl-12 lg:text-left'}`}>
+                <div className={`${process.bgColor} border border-white/10 rounded-2xl p-5 md:p-6 lg:p-8 backdrop-blur-sm hover:border-white/20 transition-all duration-300 shadow-2xl transform hover:-translate-y-1`}>
+                  <div className={`inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-xl bg-gradient-to-br ${process.color} mb-3 lg:mb-4 ${idx % 2 === 0 ? 'lg:ml-auto' : 'lg:mr-auto'}`}>
+                    <process.icon className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-white" />
                   </div>
 
-                  <h3 className="font-heading font-bold text-base md:text-xl text-white mb-2 md:mb-4">
+                  <h3 className="font-heading font-bold text-base md:text-lg lg:text-xl text-white mb-2 lg:mb-4">
                     {process.title}
                   </h3>
 
@@ -137,17 +137,17 @@ const MethodologySection = () => (
                     {process.description}
                   </p>
 
-                  <div className="mt-4 md:mt-6 flex items-center space-x-2">
+                  <div className="mt-4 lg:mt-6 flex items-center space-x-2">
                     <div className="flex-1 h-1 bg-white/20 rounded-full overflow-hidden">
                       <div className={`h-full bg-gradient-to-r ${process.color} rounded-full animate-pulse`} style={{width: `${((idx + 1) / processes.length) * 100}%`}} />
                     </div>
-                    <ChevronRight className={`w-4 h-4 text-white/60 ${idx % 2 === 0 ? 'md:rotate-180' : ''}`} />
+                    <ChevronRight className={`w-4 h-4 text-white/60 ${idx % 2 === 0 ? 'lg:rotate-180' : ''}`} />
                   </div>
                 </div>
               </div>
 
               {/* Spacer - desktop only */}
-              <div className="hidden md:block w-5/12" />
+              <div className="hidden lg:block w-5/12" />
             </div>
           ))}
         </div>

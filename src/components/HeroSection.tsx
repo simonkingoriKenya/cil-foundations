@@ -30,7 +30,7 @@ const Navbar = () => {
             <p className="text-slate-dark-foreground/70 text-[10px] sm:text-xs italic hidden sm:block">"The Best Need Not Be Expensive"</p>
           </div>
         </div>
-        <div className="hidden md:flex items-center gap-8 text-slate-dark-foreground/80 text-sm font-medium">
+        <div className="hidden lg:flex items-center gap-8 text-slate-dark-foreground/80 text-sm font-medium">
           {navLinks.map((l) => (
             <a key={l.href} href={l.href} className="hover:text-primary transition-colors">{l.label}</a>
           ))}
@@ -45,7 +45,7 @@ const Navbar = () => {
           </Button>
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-slate-dark-foreground p-1.5"
+            className="lg:hidden text-slate-dark-foreground p-1.5"
             aria-label="Toggle menu"
           >
             {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -55,7 +55,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-slate-dark/95 border-t border-slate-dark-foreground/10 px-4 pb-4 pt-2 animate-fade-up">
+        <div className="lg:hidden bg-slate-dark/95 border-t border-slate-dark-foreground/10 px-4 pb-4 pt-2 animate-fade-up">
           <div className="flex flex-col gap-3">
             {navLinks.map((l) => (
               <a
