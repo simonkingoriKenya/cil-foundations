@@ -6,6 +6,7 @@ import ClientsSection from "@/components/ClientsSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const ScrollSection = ({ children }: { children: React.ReactNode }) => {
