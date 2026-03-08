@@ -117,7 +117,7 @@ const ContactSection = () => {
           <div className="rounded-lg overflow-hidden border border-border aspect-[16/6]">
             <iframe
               title="CIL Contractors Location - Karen Plains Arcade, Nairobi"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7456!2d36.7112!3d-1.3189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1b0e1a5e3c7f%3A0x0!2sKaren+Plains+Arcade!5e0!3m2!1sen!2ske!4v1700000000000"
+              src="https://maps.google.com/maps?q=Karen+Plains+Arcade,+Karen+Plains+Road,+Nairobi,+Kenya&t=&z=16&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
