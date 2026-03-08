@@ -1,4 +1,5 @@
 import { Shield, Users, Clock, TrendingUp, Hammer, Zap, Award, Globe } from "lucide-react";
+import { useCountUp } from "@/hooks/useCountUp";
 
 const values = [
   { icon: Shield, title: "Structural Integrity", desc: "Every project built to exceed safety and quality standards." },
@@ -7,12 +8,20 @@ const values = [
   { icon: Clock, title: "24/7 Availability", desc: "Constant readiness to respond, deliver, and support at any hour." },
 ];
 
-const stats = [
-  { number: "500+", label: "Projects Completed" },
-  { number: "24/7", label: "Availability" },
-  { number: "East Africa", label: "Regional Coverage" },
-  { number: "100%", label: "Client Satisfaction" },
-];
+const AnimatedStat = ({ number, label, suffix = "" }: { number: number; label: string; suffix?: string }) => {
+  const { count, ref } = useCountUp(number, 2000);
+  return (
+    <div
+      ref={ref}
+      className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-8 text-center hover:border-primary/40 transition-colors"
+    >
+      <p className="font-heading font-bold text-3xl sm:text-4xl text-primary mb-2">
+        {count}{suffix}
+      </p>
+      <p className="text-muted-foreground text-sm font-medium">{label}</p>
+    </div>
+  );
+};
 
 const expertise = [
   { icon: Hammer, title: "Building Construction", desc: "High-rise offices, residential estates, commercial complexes" },
@@ -24,7 +33,6 @@ const expertise = [
 const AboutSection = () => (
   <section id="about" className="py-32 bg-background">
     <div className="container mx-auto px-4">
-      {/* Header Section */}
       <div className="text-center mb-20">
         <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-4">
           Our Story
@@ -37,7 +45,6 @@ const AboutSection = () => (
         </p>
       </div>
 
-      {/* Main Content Grid */}
       <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
         <div>
           <div className="space-y-6">
@@ -62,21 +69,14 @@ const AboutSection = () => (
           </div>
         </div>
 
-        {/* Stats Section */}
         <div className="grid grid-cols-2 gap-6">
-          {stats.map((stat, idx) => (
-            <div
-              key={idx}
-              className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-8 text-center hover:border-primary/40 transition-colors"
-            >
-              <p className="font-heading font-bold text-3xl sm:text-4xl text-primary mb-2">{stat.number}</p>
-              <p className="text-muted-foreground text-sm font-medium">{stat.label}</p>
-            </div>
-          ))}
+          <AnimatedStat number={500} label="Projects Completed" suffix="+" />
+          <AnimatedStat number={15} label="Years of Excellence" suffix="+" />
+          <AnimatedStat number={6} label="Countries Served" />
+          <AnimatedStat number={100} label="Client Satisfaction" suffix="%" />
         </div>
       </div>
 
-      {/* Core Values Section */}
       <div className="mb-20">
         <div className="text-center mb-12">
           <h3 className="font-heading font-bold text-3xl text-foreground">Our Core Values</h3>
@@ -98,7 +98,6 @@ const AboutSection = () => (
         </div>
       </div>
 
-      {/* Expertise Highlights */}
       <div className="bg-muted/50 rounded-2xl p-12">
         <h3 className="font-heading font-bold text-3xl text-foreground mb-12 text-center">Our Expertise</h3>
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
