@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 import heroImg from "@/assets/hero-construction.jpg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -9,6 +9,30 @@ const navLinks = [
   { href: "#services", label: "Services" },
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact Us" },
+];
+
+const heroSlides = [
+  {
+    image: heroImg,
+    subtitle: "General Building & Civil Engineering",
+    title: "Building East Africa's",
+    highlight: "Future",
+    description: "Where the best need not be expensive. From high-rise office blocks to roads and water systems — quality construction across Kenya and East Africa.",
+  },
+  {
+    image: "/residential-7.jpg",
+    subtitle: "Residential Excellence",
+    title: "Crafting Dream",
+    highlight: "Homes",
+    description: "Premium residential estates and executive bungalows that redefine luxury living across East Africa.",
+  },
+  {
+    image: "/road-1.jpg",
+    subtitle: "Infrastructure & Civil Works",
+    title: "Connecting",
+    highlight: "Communities",
+    description: "Roads, water systems, and infrastructure projects that form the backbone of East Africa's growth.",
+  },
 ];
 
 const Navbar = () => {
@@ -53,7 +77,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div className="lg:hidden bg-slate-dark/95 border-t border-slate-dark-foreground/10 px-4 pb-4 pt-2 animate-fade-up">
           <div className="flex flex-col gap-3">
@@ -81,51 +104,100 @@ const Navbar = () => {
   );
 };
 
-const HeroSection = () => (
-  <section id="home" className="relative min-h-[90vh] flex items-center overflow-hidden">
-    <div className="absolute inset-0">
-      <img src={heroImg} alt="Construction site in Nairobi" className="w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-dark/90 via-slate-dark/70 to-slate-dark/40" />
-    </div>
-    <div className="relative container mx-auto px-4 py-32">
-      <div className="max-w-2xl animate-fade-up">
-        <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-4">
-          General Building & Civil Engineering
-        </p>
-        <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-dark-foreground leading-[1.1] mb-6">
-          Building East Africa's <span className="text-primary">Future</span>
-        </h1>
-        <p className="text-slate-dark-foreground/75 text-lg max-w-lg mb-8 leading-relaxed">
-          Where the best need not be expensive. From high-rise office blocks to roads and water systems — quality construction across Kenya and East Africa.
-        </p>
-        <div className="flex flex-wrap gap-4">
-          <Button variant="hero" size="lg" asChild>
-            <a href="#contact">Request a Quote</a>
-          </Button>
-          <Button variant="hero-outline" size="lg" asChild>
-            <a href="#services">Our Services</a>
-          </Button>
+const HeroSection = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % heroSlides.length);
+    }, 7000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const slide = heroSlides[current];
+
+  return (
+    <section id="home" className="relative min-h-[90vh] flex items-center overflow-hidden">
+      {/* Background images with crossfade */}
+      {heroSlides.map((s, idx) => (
+        <div
+          key={idx}
+          className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+          style={{ opacity: idx === current ? 1 : 0 }}
+        >
+          <img
+            src={typeof s.image === "string" ? s.image : s.image}
+            alt="Construction project"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-dark/90 via-slate-dark/70 to-slate-dark/40" />
+        </div>
+      ))}
+
+      <div className="relative container mx-auto px-4 py-32">
+        <div className="max-w-2xl">
+          <p
+            key={`sub-${current}`}
+            className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-4 animate-fade-up"
+          >
+            {slide.subtitle}
+          </p>
+          <h1
+            key={`title-${current}`}
+            className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-dark-foreground leading-[1.1] mb-6 animate-fade-up"
+          >
+            {slide.title} <span className="text-primary">{slide.highlight}</span>
+          </h1>
+          <p
+            key={`desc-${current}`}
+            className="text-slate-dark-foreground/75 text-lg max-w-lg mb-8 leading-relaxed animate-fade-up"
+          >
+            {slide.description}
+          </p>
+          <div className="flex flex-wrap gap-4 animate-fade-up">
+            <Button variant="hero" size="lg" asChild>
+              <a href="#contact">Request a Quote</a>
+            </Button>
+            <Button variant="hero-outline" size="lg" asChild>
+              <a href="#services">Our Services</a>
+            </Button>
+          </div>
         </div>
       </div>
-    </div>
-    {/* Bottom stats bar */}
-    <div className="absolute bottom-0 left-0 right-0 bg-slate-dark/80 backdrop-blur-sm border-t border-slate-dark-foreground/10">
-      <div className="container mx-auto px-4 py-4 grid grid-cols-3 gap-4 text-center">
-        <div>
-          <p className="font-heading font-bold text-2xl text-primary">24/7</p>
-          <p className="text-slate-dark-foreground/60 text-xs">Availability</p>
-        </div>
-        <div>
-          <p className="font-heading font-bold text-2xl text-primary">East Africa</p>
-          <p className="text-slate-dark-foreground/60 text-xs">Regional Coverage</p>
-        </div>
-        <div>
-          <p className="font-heading font-bold text-2xl text-primary">Full Scope</p>
-          <p className="text-slate-dark-foreground/60 text-xs">Building & Civil</p>
+
+      {/* Slide indicators */}
+      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        {heroSlides.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrent(idx)}
+            className={`h-1.5 rounded-full transition-all duration-500 ${
+              idx === current ? "bg-primary w-10" : "bg-slate-dark-foreground/30 w-4 hover:bg-slate-dark-foreground/50"
+            }`}
+            aria-label={`Go to slide ${idx + 1}`}
+          />
+        ))}
+      </div>
+
+      {/* Bottom stats bar */}
+      <div className="absolute bottom-0 left-0 right-0 bg-slate-dark/80 backdrop-blur-sm border-t border-slate-dark-foreground/10">
+        <div className="container mx-auto px-4 py-4 grid grid-cols-3 gap-4 text-center">
+          <div>
+            <p className="font-heading font-bold text-2xl text-primary">24/7</p>
+            <p className="text-slate-dark-foreground/60 text-xs">Availability</p>
+          </div>
+          <div>
+            <p className="font-heading font-bold text-2xl text-primary">East Africa</p>
+            <p className="text-slate-dark-foreground/60 text-xs">Regional Coverage</p>
+          </div>
+          <div>
+            <p className="font-heading font-bold text-2xl text-primary">Full Scope</p>
+            <p className="text-slate-dark-foreground/60 text-xs">Building & Civil</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export { Navbar, HeroSection };
