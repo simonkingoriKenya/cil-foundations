@@ -7,6 +7,7 @@ import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const ScrollSection = ({ children }: { children: React.ReactNode }) => {
@@ -33,6 +34,7 @@ const Index = () => {
       </main>
       <Footer />
       <BackToTop />
+      <WhatsAppButton />
     </>
   );
 };
