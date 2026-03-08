@@ -101,7 +101,7 @@ const AboutSection = () => (
       {/* Expertise Highlights */}
       <div className="bg-muted/50 rounded-2xl p-12">
         <h3 className="font-heading font-bold text-3xl text-foreground mb-12 text-center">Our Expertise</h3>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
           {expertise.map((exp, idx) => (
             <div key={idx} className="text-center">
               <div className="bg-primary/15 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
