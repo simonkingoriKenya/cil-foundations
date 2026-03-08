@@ -1,4 +1,5 @@
 import { Shield, Users, Clock, TrendingUp, Hammer, Zap, Award, Globe } from "lucide-react";
+import { useCountUp } from "@/hooks/useCountUp";
 
 const values = [
   { icon: Shield, title: "Structural Integrity", desc: "Every project built to exceed safety and quality standards." },
@@ -7,11 +8,26 @@ const values = [
   { icon: Clock, title: "24/7 Availability", desc: "Constant readiness to respond, deliver, and support at any hour." },
 ];
 
-const stats = [
-  { number: "500+", label: "Projects Completed" },
-  { number: "24/7", label: "Availability" },
-  { number: "East Africa", label: "Regional Coverage" },
-  { number: "100%", label: "Client Satisfaction" },
+const AnimatedStat = ({ number, label, suffix = "" }: { number: number; label: string; suffix?: string }) => {
+  const { count, ref } = useCountUp(number, 2000);
+  return (
+    <div
+      ref={ref}
+      className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-8 text-center hover:border-primary/40 transition-colors"
+    >
+      <p className="font-heading font-bold text-3xl sm:text-4xl text-primary mb-2">
+        {count}{suffix}
+      </p>
+      <p className="text-muted-foreground text-sm font-medium">{label}</p>
+    </div>
+  );
+};
+
+const expertise = [
+  { icon: Hammer, title: "Building Construction", desc: "High-rise offices, residential estates, commercial complexes" },
+  { icon: Zap, title: "Civil Engineering", desc: "Roads, water systems, drainage, infrastructure projects" },
+  { icon: Award, title: "Quality Assurance", desc: "Rigorous standards & compliance across all projects" },
+  { icon: Globe, title: "Regional Reach", desc: "Operations spanning Kenya and East Africa" },
 ];
 
 const expertise = [
