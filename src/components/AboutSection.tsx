@@ -67,6 +67,16 @@ const AboutSection = () => (
                 We believe in delivering excellence through discipline, innovation, and unwavering commitment to our clients. Every brick, every calculation, every hour reflects our dedication to building a better East Africa.
               </p>
             </div>
+            <Button variant="steel" size="lg" asChild className="mt-6">
+              <a
+                href="https://drive.google.com/uc?export=download&id=1BXq07Pdmkn1rVyV2yAfggNNPVrRlwwSz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gap-2"
+              >
+                <Download className="w-4 h-4" /> Download Company Profile
+              </a>
+            </Button>
           </div>
         </div>
 
