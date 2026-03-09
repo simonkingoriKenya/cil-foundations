@@ -80,8 +80,8 @@ const TeamSection = () => (
         />
         <div>
           <div className="flex items-center gap-2 mb-3">
-            <Award className="w-5 h-5 text-primary" />
-            <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase">
+            <Award className="w-5 h-5 text-gold" />
+            <p className="text-gold font-heading font-semibold text-sm tracking-widest uppercase">
               Recognition
             </p>
           </div>

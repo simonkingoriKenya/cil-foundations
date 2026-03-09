@@ -88,7 +88,7 @@ const TestimonialsSection = () => {
               onClick={() => setActive(idx)}
               className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                 idx === active
-                  ? "bg-primary w-8"
+                  ? "bg-gold w-8"
                   : "bg-slate-dark-foreground/20 hover:bg-slate-dark-foreground/40"
               }`}
               aria-label={`View testimonial ${idx + 1}`}

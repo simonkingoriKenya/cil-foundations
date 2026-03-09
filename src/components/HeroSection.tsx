@@ -50,7 +50,7 @@ const Navbar = () => {
             />
           </div>
           <div>
-            <p className="font-heading font-bold text-primary text-sm sm:text-lg leading-tight">CIL CONTRACTORS LTD</p>
+            <p className="font-heading font-bold text-gold text-sm sm:text-lg leading-tight">CIL CONTRACTORS LTD</p>
             <p className="text-slate-dark-foreground/70 text-[10px] sm:text-xs italic hidden sm:block">"The Best Need Not Be Expensive"</p>
           </div>
         </div>

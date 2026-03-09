@@ -83,7 +83,7 @@ const MethodologySection = () => (
 
     <div className="container mx-auto px-4 relative z-10">
       <div className="text-center mb-20">
-        <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-4">
+        <p className="text-gold font-heading font-semibold text-sm tracking-widest uppercase mb-4">
           Our Process
         </p>
         <h2 className="font-heading font-bold text-4xl sm:text-5xl text-whslslate-dark-foregroundark-foregroundb-6">

@@ -84,7 +84,7 @@ const ProjectsSection = () => {
     <section id="projects" className="py-24 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-3">
+          <p className="text-gold font-heading font-semibold text-sm tracking-widest uppercase mb-3">
             Our Portfolio
           </p>
           <h2 className="font-heading font-bold text-3xl sm:text-4xl text-foreground">
