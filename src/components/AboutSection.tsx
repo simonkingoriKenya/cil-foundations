@@ -14,7 +14,7 @@ const AnimatedStat = ({ number, label, suffix = "" }: { number: number; label: s
   return (
     <div
       ref={ref}
-      className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-8 text-center hover:border-primary/40 transition-colors"
+      className="bg-gradient-to-br from-gold/10 to-gold/5 border border-gold/20 rounded-xl p-8 text-center hover:border-gold/40 transition-colors"
     >
       <p className="font-heading font-bold text-3xl sm:text-4xl text-primary mb-2">
         {count}{suffix}
