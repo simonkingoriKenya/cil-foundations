@@ -86,10 +86,10 @@ const MethodologySection = () => (
         <p className="text-gold font-heading font-semibold text-sm tracking-widest uppercase mb-4">
           Our Process
         </p>
-        <h2 className="font-heading font-bold text-4xl sm:text-5xl text-whslslate-dark-foregroundark-foregroundb-6">
+        <h2 className="font-heading font-bold text-4xl sm:text-5xl text-slate-dark-foreground mb-6">
           Our Structured Approach
         </h2>
-        <p classNamdark-foreground/7"text-slate-300 max-w-2xl mx-auto text-lg">
+        <p className="text-slate-dark-foreground/70 max-w-2xl mx-auto text-lg">
           We follow a structured and transparent process to ensure every project is delivered successfully and stress-free
         </p>
       </div>
