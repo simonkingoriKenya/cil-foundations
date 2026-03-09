@@ -146,7 +146,7 @@ const HeroSection = () => {
             key={`title-${current}`}
             className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-dark-foreground leading-[1.1] mb-6 animate-fade-up"
           >
-            {slide.title} <span className="text-primary">{slide.highlight}</span>
+            {slide.title} <span className="text-gold">{slide.highlight}</span>
           </h1>
           <p
             key={`desc-${current}`}
