@@ -52,7 +52,7 @@ const TestimonialsSection = () => {
 
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-16">
-          <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-3">
+        <p className="text-gold font-heading font-semibold text-sm tracking-widest uppercase mb-3">
             Client Voices
           </p>
           <h2 className="font-heading font-bold text-3xl sm:text-4xl text-slate-dark-foreground">
@@ -62,7 +62,7 @@ const TestimonialsSection = () => {
 
         <div className="max-w-3xl mx-auto text-center">
           <div className="mb-8">
-            <Quote className="w-12 h-12 text-primary/40 mx-auto mb-6" />
+            <Quote className="w-12 h-12 text-gold/40 mx-auto mb-6" />
             <p
               key={active}
               className="text-slate-dark-foreground/85 text-lg sm:text-xl leading-relaxed italic animate-fade-in"
@@ -75,7 +75,7 @@ const TestimonialsSection = () => {
             <p className="font-heading font-bold text-slate-dark-foreground text-base">
               {t.name}
             </p>
-            <p className="text-primary text-sm font-medium">{t.title}</p>
+            <p className="text-gold text-sm font-medium">{t.title}</p>
             <p className="text-slate-dark-foreground/50 text-sm">{t.company} — {t.project}</p>
           </div>
         </div>
@@ -88,7 +88,7 @@ const TestimonialsSection = () => {
               onClick={() => setActive(idx)}
               className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                 idx === active
-                  ? "bg-primary w-8"
+                  ? "bg-gold w-8"
                   : "bg-slate-dark-foreground/20 hover:bg-slate-dark-foreground/40"
               }`}
               aria-label={`View testimonial ${idx + 1}`}

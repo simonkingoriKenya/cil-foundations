@@ -37,7 +37,7 @@ const TeamSection = () => (
   <section className="py-24 bg-background">
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
-        <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-3">
+        <p className="text-gold font-heading font-semibold text-sm tracking-widest uppercase mb-3">
           Our Leadership
         </p>
         <h2 className="font-heading font-bold text-3xl sm:text-4xl text-foreground mb-4">
@@ -80,8 +80,8 @@ const TeamSection = () => (
         />
         <div>
           <div className="flex items-center gap-2 mb-3">
-            <Award className="w-5 h-5 text-primary" />
-            <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase">
+            <Award className="w-5 h-5 text-gold" />
+            <p className="text-gold font-heading font-semibold text-sm tracking-widest uppercase">
               Recognition
             </p>
           </div>

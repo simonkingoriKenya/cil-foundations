@@ -50,7 +50,7 @@ const Navbar = () => {
             />
           </div>
           <div>
-            <p className="font-heading font-bold text-primary text-sm sm:text-lg leading-tight">CIL CONTRACTORS LTD</p>
+            <p className="font-heading font-bold text-gold text-sm sm:text-lg leading-tight">CIL CONTRACTORS LTD</p>
             <p className="text-slate-dark-foreground/70 text-[10px] sm:text-xs italic hidden sm:block">"The Best Need Not Be Expensive"</p>
           </div>
         </div>
@@ -138,7 +138,7 @@ const HeroSection = () => {
         <div className="max-w-2xl">
           <p
             key={`sub-${current}`}
-            className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-4 animate-fade-up"
+            className="text-gold font-heading font-semibold text-sm tracking-widest uppercase mb-4 animate-fade-up"
           >
             {slide.subtitle}
           </p>
@@ -146,7 +146,7 @@ const HeroSection = () => {
             key={`title-${current}`}
             className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-dark-foreground leading-[1.1] mb-6 animate-fade-up"
           >
-            {slide.title} <span className="text-primary">{slide.highlight}</span>
+            {slide.title} <span className="text-gold">{slide.highlight}</span>
           </h1>
           <p
             key={`desc-${current}`}
@@ -183,15 +183,15 @@ const HeroSection = () => {
       <div className="absolute bottom-0 left-0 right-0 bg-slate-dark/80 backdrop-blur-sm border-t border-slate-dark-foreground/10">
         <div className="container mx-auto px-4 py-4 grid grid-cols-3 gap-4 text-center">
           <div>
-            <p className="font-heading font-bold text-2xl text-primary">24/7</p>
+            <p className="font-heading font-bold text-2xl text-gold">24/7</p>
             <p className="text-slate-dark-foreground/60 text-xs">Availability</p>
           </div>
           <div>
-            <p className="font-heading font-bold text-2xl text-primary">East Africa</p>
+            <p className="font-heading font-bold text-2xl text-gold">East Africa</p>
             <p className="text-slate-dark-foreground/60 text-xs">Regional Coverage</p>
           </div>
           <div>
-            <p className="font-heading font-bold text-2xl text-primary">Full Scope</p>
+            <p className="font-heading font-bold text-2xl text-gold">Full Scope</p>
             <p className="text-slate-dark-foreground/60 text-xs">Building & Civil</p>
           </div>
         </div>

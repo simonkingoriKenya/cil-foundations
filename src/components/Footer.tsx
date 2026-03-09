@@ -15,7 +15,7 @@ const Footer = () => (
               />
             </div>
             <div>
-              <p className="font-heading font-bold text-primary text-base leading-tight">CIL CONTRACTORS LTD</p>
+              <p className="font-heading font-bold text-gold text-base leading-tight">CIL CONTRACTORS LTD</p>
               <p className="text-slate-dark-foreground/70 text-xs italic">"The Best Need Not Be Expensive"</p>
             </div>
           </div>

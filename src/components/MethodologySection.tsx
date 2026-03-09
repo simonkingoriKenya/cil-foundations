@@ -68,7 +68,7 @@ const processes = [
 ];
 
 const MethodologySection = () => (
-  <section className="py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+  <section className="py-32 bg-gradient-to-br from-slate-dark via-steel to-slate-darkative overflow-hidden">
     {/* Background Pattern */}
     <div className="absolute inset-0 opacity-5">
       <div className="absolute inset-0" style={{
@@ -83,13 +83,13 @@ const MethodologySection = () => (
 
     <div className="container mx-auto px-4 relative z-10">
       <div className="text-center mb-20">
-        <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-4">
+        <p className="text-gold font-heading font-semibold text-sm tracking-widest uppercase mb-4">
           Our Process
         </p>
-        <h2 className="font-heading font-bold text-4xl sm:text-5xl text-white mb-6">
+        <h2 className="font-heading font-bold text-4xl sm:text-5xl text-slate-dark-foreground mb-6">
           Our Structured Approach
         </h2>
-        <p className="text-slate-300 max-w-2xl mx-auto text-lg">
+        <p className="text-slate-dark-foreground/70 max-w-2xl mx-auto text-lg">
           We follow a structured and transparent process to ensure every project is delivered successfully and stress-free
         </p>
       </div>
@@ -97,28 +97,28 @@ const MethodologySection = () => (
       {/* Graphical Timeline */}
       <div className="max-w-5xl mx-auto relative">
         {/* Central Timeline Line - hidden on mobile/tablet */}
-        <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-primary via-primary/60 to-primary/20 h-full rounded-full shadow-lg">
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/50 to-transparent animate-pulse rounded-full" />
+        <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-gold via-gold/60 to-gold/20 h-full rounded-full shadow-lg">
+          <div className="absolute inset-0 bg-gradient-to-b from-gold/50 to-transparent animate-pulse rounded-full" />
         </div>
 
         {/* Mobile/tablet: left line */}
-        <div className="lg:hidden absolute left-6 w-1 bg-gradient-to-b from-primary via-primary/60 to-primary/20 h-full rounded-full shadow-lg" />
+        <div className="lg:hidden absolute left-6 w-1 bg-gradient-to-b from-gold via-gold/60 to-gold/20 h-full rounded-full shadow-lg" />
 
         <div className="space-y-8 lg:space-y-16">
           {processes.map((process, idx) => (
             <div key={idx} className={`relative flex items-center ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
               {/* Timeline Node - desktop centered */}
               <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 z-20">
-                <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${process.color} border-4 border-white shadow-2xl flex items-center justify-center transform hover:scale-110 transition-transform duration-300`}>
-                  <span className="font-heading font-bold text-xl text-white">{process.step}</span>
+                <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${process.color} border-4 border-slate-dark-foreground/20 shadow-2xl flex items-center justify-center transform hover:scale-110 transition-transform duration-300`}>
+                  <span className="font-heading font-bold text-xl text-slate-dark-foreground">{process.step}</span>
                 </div>
                 <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${process.color} opacity-30 blur-md animate-pulse`} />
               </div>
 
               {/* Timeline Node - mobile/tablet left */}
               <div className="lg:hidden absolute left-6 transform -translate-x-1/2 z-20">
-                <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br ${process.color} border-2 border-white shadow-xl flex items-center justify-center`}>
-                  <span className="font-heading font-bold text-sm md:text-base text-white">{process.step}</span>
+                <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br ${process.color} border-2 border-slate-dark-foreground/20 shadow-xl flex items-center justify-center`}>
+                  <span className="font-heading font-bold text-sm md:text-base text-slate-dark-foreground">{process.step}</span>
                 </div>
               </div>
 
@@ -129,19 +129,19 @@ const MethodologySection = () => (
                     <process.icon className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-white" />
                   </div>
 
-                  <h3 className="font-heading font-bold text-base md:text-lg lg:text-xl text-white mb-2 lg:mb-4">
+                  <h3 className="font-heading font-bold text-base md:text-lg lg:text-xl text-slate-dark-foreground mb-2 lg:mb-4">
                     {process.title}
                   </h3>
 
-                  <p className="text-slate-300 leading-relaxed text-sm md:text-base">
+                  <p className="text-slate-dark-foreground/70 leading-relaxed text-sm md:text-base">
                     {process.description}
                   </p>
 
                   <div className="mt-4 lg:mt-6 flex items-center space-x-2">
-                    <div className="flex-1 h-1 bg-white/20 rounded-full overflow-hidden">
+                    <div className="flex-1 h-1 bg-slate-dark-foreground/20 rounded-full overflow-hidden">
                       <div className={`h-full bg-gradient-to-r ${process.color} rounded-full animate-pulse`} style={{width: `${((idx + 1) / processes.length) * 100}%`}} />
                     </div>
-                    <ChevronRight className={`w-4 h-4 text-white/60 ${idx % 2 === 0 ? 'lg:rotate-180' : ''}`} />
+                    <ChevronRight className={`w-4 h-4 text-slate-dark-foreground/60 ${idx % 2 === 0 ? 'lg:rotate-180' : ''}`} />
                   </div>
                 </div>
               </div>
@@ -154,16 +154,16 @@ const MethodologySection = () => (
 
         {/* Completion Badge */}
         <div className="flex justify-center mt-16">
-          <div className="bg-gradient-to-r from-primary to-primary/80 text-white px-8 py-4 rounded-full font-heading font-bold text-lg shadow-2xl border border-white/20">
+          <div className="bg-gradient-to-r from-gold to-gold/80 text-gold-foreground px-8 py-4 rounded-full font-heading font-bold text-lg shadow-2xl border border-gold/30">
             🎯 Project Complete - Ready for Handover
           </div>
         </div>
       </div>
 
       {/* Bottom Message */}
-      <div className="mt-20 text-center bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/30 rounded-2xl p-8 max-w-4xl mx-auto backdrop-blur-sm">
-        <p className="text-slate-100 text-lg leading-relaxed">
-          <span className="text-primary font-semibold">From consultation to handover,</span> we guide you through every step with transparency, expertise, and unwavering commitment to excellence.
+      <div className="mt-20 text-center bg-gradient-to-r from-gold/10 to-gold/5 border border-gold/30 rounded-2xl p-8 max-w-4xl mx-auto backdrop-blur-sm">
+        <p className="text-slate-dark-foreground text-lg leading-relaxed">
+          <span className="text-gold font-semibold">From consultation to handover,</span> we guide you through every step with transparency, expertise, and unwavering commitment to excellence.
         </p>
       </div>
     </div>

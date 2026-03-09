@@ -37,7 +37,7 @@ const ServicesSection = () => (
   <section id="services" className="py-32 bg-gradient-to-b from-background to-muted/30">
     <div className="container mx-auto px-4">
       <div className="text-center mb-20">
-        <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-4">
+        <p className="text-gold font-heading font-semibold text-sm tracking-widest uppercase mb-4">
           What We Do
         </p>
         <h2 className="font-heading font-bold text-4xl sm:text-5xl text-foreground mb-6">
@@ -51,19 +51,19 @@ const ServicesSection = () => (
         {services.map((service, idx) => (
           <div
             key={service.title}
-            className="group relative bg-white border-2 border-slate-200 rounded-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer overflow-hidden"
+            className="group relative bg-card border-2 border-border rounded-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer overflow-hidden"
           >
             {/* Card Content */}
             <div className="relative z-10">
-              <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mb-6 group-hover:bg-primary/90 transition-all duration-300">
-                <service.icon className="w-7 h-7 text-white" />
+              <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mb-6 group-hover:bg-gold transition-all duration-300">
+                <service.icon className="w-7 h-7 text-primary-foreground" />
               </div>
               
-              <h3 className="font-heading font-bold text-xl text-slate-900 mb-3 group-hover:text-primary transition-colors duration-300">
+              <h3 className="font-heading font-bold text-xl text-foreground mb-3 group-hover:text-gold transition-colors duration-300">
                 {service.title}
               </h3>
               
-              <p className="text-slate-700 text-base leading-relaxed group-hover:text-slate-800 transition-colors duration-300">
+              <p className="text-muted-foreground text-base leading-relaxed">
                 {service.description}
               </p>
             </div>

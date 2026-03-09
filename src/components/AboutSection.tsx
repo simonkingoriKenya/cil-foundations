@@ -14,9 +14,9 @@ const AnimatedStat = ({ number, label, suffix = "" }: { number: number; label: s
   return (
     <div
       ref={ref}
-      className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-8 text-center hover:border-primary/40 transition-colors"
+      className="bg-gradient-to-br from-gold/10 to-gold/5 border border-gold/20 rounded-xl p-8 text-center hover:border-gold/40 transition-colors"
     >
-      <p className="font-heading font-bold text-3xl sm:text-4xl text-primary mb-2">
+      <p className="font-heading font-bold text-3xl sm:text-4xl text-gold mb-2">
         {count}{suffix}
       </p>
       <p className="text-muted-foreground text-sm font-medium">{label}</p>
@@ -35,7 +35,7 @@ const AboutSection = () => (
   <section id="about" className="py-32 bg-background">
     <div className="container mx-auto px-4">
       <div className="text-center mb-20">
-        <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-4">
+        <p className="text-gold font-heading font-semibold text-sm tracking-widest uppercase mb-4">
           Our Story
         </p>
         <h2 className="font-heading font-bold text-4xl sm:text-5xl text-foreground mb-6">
