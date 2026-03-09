@@ -97,12 +97,12 @@ const MethodologySection = () => (
       {/* Graphical Timeline */}
       <div className="max-w-5xl mx-auto relative">
         {/* Central Timeline Line - hidden on mobile/tablet */}
-        <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-primary via-primary/60 to-primary/20 h-full rounded-full shadow-lg">
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/50 to-transparent animate-pulse rounded-full" />
+        <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-gold via-gold/60 to-gold/20 h-full rounded-full shadow-lg">
+          <div className="absolute inset-0 bg-gradient-to-b from-gold/50 to-transparent animate-pulse rounded-full" />
         </div>
 
         {/* Mobile/tablet: left line */}
-        <div className="lg:hidden absolute left-6 w-1 bg-gradient-to-b from-primary via-primary/60 to-primary/20 h-full rounded-full shadow-lg" />
+        <div className="lg:hidden absolute left-6 w-1 bg-gradient-to-b from-gold via-gold/60 to-gold/20 h-full rounded-full shadow-lg" />
 
         <div className="space-y-8 lg:space-y-16">
           {processes.map((process, idx) => (
