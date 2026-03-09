@@ -117,8 +117,8 @@ const MethodologySection = () => (
 
               {/* Timeline Node - mobile/tablet left */}
               <div className="lg:hidden absolute left-6 transform -translate-x-1/2 z-20">
-                <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br ${process.color} border-2 border-white shadow-xl flex items-center justify-center`}>
-                  <span className="font-heading font-bold text-sm md:text-base text-white">{process.step}</span>
+                <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br ${process.color} border-2 border-slate-dark-foreground/20 shadow-xl flex items-center justify-center`}>
+                  <span className="font-heading font-bold text-sm md:text-base text-slate-dark-foreground">{process.step}</span>
                 </div>
               </div>
 
