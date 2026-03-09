@@ -35,7 +35,7 @@ const AboutSection = () => (
   <section id="about" className="py-32 bg-background">
     <div className="container mx-auto px-4">
       <div className="text-center mb-20">
-        <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-4">
+        <p className="text-gold font-heading font-semibold text-sm tracking-widest uppercase mb-4">
           Our Story
         </p>
         <h2 className="font-heading font-bold text-4xl sm:text-5xl text-foreground mb-6">
