@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => (
   <footer className="bg-slate-dark py-16">
@@ -19,9 +19,26 @@ const Footer = () => (
               <p className="text-slate-dark-foreground/70 text-xs italic">"The Best Need Not Be Expensive"</p>
             </div>
           </div>
-          <p className="text-slate-dark-foreground/60 text-sm leading-relaxed">
+          <p className="text-slate-dark-foreground/60 text-sm leading-relaxed mb-4">
             Transforming East Africa's skyline — where the best need not be expensive.
           </p>
+          <div className="flex gap-3">
+            {[
+              { icon: Facebook, label: "Facebook" },
+              { icon: Instagram, label: "Instagram" },
+              { icon: Linkedin, label: "LinkedIn" },
+              { icon: Twitter, label: "Twitter" },
+            ].map((social) => (
+              <a
+                key={social.label}
+                href="#"
+                aria-label={social.label}
+                className="w-8 h-8 rounded-full bg-slate-dark-foreground/10 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors text-slate-dark-foreground/60"
+              >
+                <social.icon className="w-4 h-4" />
+              </a>
+            ))}
+          </div>
         </div>
         <div>
           <h4 className="font-heading font-semibold text-slate-dark-foreground text-sm mb-4">Services</h4>
