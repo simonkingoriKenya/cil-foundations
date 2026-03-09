@@ -187,7 +187,7 @@ const HeroSection = () => {
             <p className="text-slate-dark-foreground/60 text-xs">Availability</p>
           </div>
           <div>
-            <p className="font-heading font-bold text-2xl text-primary">East Africa</p>
+            <p className="font-heading font-bold text-2xl text-gold">East Africa</p>
             <p className="text-slate-dark-foreground/60 text-xs">Regional Coverage</p>
           </div>
           <div>
