@@ -109,8 +109,8 @@ const MethodologySection = () => (
             <div key={idx} className={`relative flex items-center ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
               {/* Timeline Node - desktop centered */}
               <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 z-20">
-                <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${process.color} border-4 border-white shadow-2xl flex items-center justify-center transform hover:scale-110 transition-transform duration-300`}>
-                  <span className="font-heading font-bold text-xl text-white">{process.step}</span>
+                <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${process.color} border-4 border-slate-dark-foreground/20 shadow-2xl flex items-center justify-center transform hover:scale-110 transition-transform duration-300`}>
+                  <span className="font-heading font-bold text-xl text-slate-dark-foreground">{process.step}</span>
                 </div>
                 <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${process.color} opacity-30 blur-md animate-pulse`} />
               </div>
