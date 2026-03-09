@@ -68,7 +68,7 @@ const processes = [
 ];
 
 const MethodologySection = () => (
-  <section className="py-32 bg-gradient-to-br from-slate-dark via-steel to-slate-dark relative overflow-hidden">
+  <section className="py-32 bg-gradient-to-br from-slate-dark via-steel to-slate-darkelative overflow-hidden">
     {/* Background Pattern */}
     <div className="absolute inset-0 opacity-5">
       <div className="absolute inset-0" style={{
@@ -86,7 +86,7 @@ const MethodologySection = () => (
         <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-4">
           Our Process
         </p>
-        <h2 className="font-heading font-bold text-4xl sm:text-5xl text-white mb-6">
+        <h2 className="font-heading font-bold text-4xl sm:text-5xl text-whslate-dark-foregroundb-6">
           Our Structured Approach
         </h2>
         <p className="text-slate-300 max-w-2xl mx-auto text-lg">
