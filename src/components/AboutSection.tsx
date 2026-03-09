@@ -1,4 +1,5 @@
-import { Shield, Users, Clock, TrendingUp, Hammer, Zap, Award, Globe } from "lucide-react";
+import { Shield, Users, Clock, TrendingUp, Hammer, Zap, Award, Globe, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { useCountUp } from "@/hooks/useCountUp";
 
 const values = [
