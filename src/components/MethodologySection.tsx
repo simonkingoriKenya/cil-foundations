@@ -161,9 +161,9 @@ const MethodologySection = () => (
       </div>
 
       {/* Bottom Message */}
-      <div className="mt-20 text-center bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/30 rounded-2xl p-8 max-w-4xl mx-auto backdrop-blur-sm">
-        <p className="text-slate-100 text-lg leading-relaxed">
-          <span className="text-primary font-semibold">From consultation to handover,</span> we guide you through every step with transparency, expertise, and unwavering commitment to excellence.
+      <div className="mt-20 text-center bg-gradient-to-r from-gold/10 to-gold/5 border border-gold/30 rounded-2xl p-8 max-w-4xl mx-auto backdrop-blur-sm">
+        <p className="text-slate-dark-foreground text-lg leading-relaxed">
+          <span className="text-gold font-semibold">From consultation to handover,</span> we guide you through every step with transparency, expertise, and unwavering commitment to excellence.
         </p>
       </div>
     </div>
