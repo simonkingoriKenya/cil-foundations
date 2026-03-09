@@ -154,7 +154,7 @@ const MethodologySection = () => (
 
         {/* Completion Badge */}
         <div className="flex justify-center mt-16">
-          <div className="bg-gradient-to-r from-primary to-primary/80 text-white px-8 py-4 rounded-full font-heading font-bold text-lg shadow-2xl border border-white/20">
+          <div className="bg-gradient-to-r from-gold to-gold/80 text-gold-foreground px-8 py-4 rounded-full font-heading font-bold text-lg shadow-2xl border border-gold/30">
             🎯 Project Complete - Ready for Handover
           </div>
         </div>
