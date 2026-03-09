@@ -183,7 +183,7 @@ const HeroSection = () => {
       <div className="absolute bottom-0 left-0 right-0 bg-slate-dark/80 backdrop-blur-sm border-t border-slate-dark-foreground/10">
         <div className="container mx-auto px-4 py-4 grid grid-cols-3 gap-4 text-center">
           <div>
-            <p className="font-heading font-bold text-2xl text-primary">24/7</p>
+            <p className="font-heading font-bold text-2xl text-gold">24/7</p>
             <p className="text-slate-dark-foreground/60 text-xs">Availability</p>
           </div>
           <div>
