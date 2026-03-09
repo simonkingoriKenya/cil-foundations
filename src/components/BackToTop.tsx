@@ -1,7 +1,7 @@
 import { ArrowUp } from "lucide-react";
-import { useEffect, useState } from "react";
+import { forwardRef, useEffect, useState } from "react";
 
-const BackToTop = () => {
+const BackToTop = forwardRef<HTMLButtonElement>((_, ref) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -21,6 +21,8 @@ const BackToTop = () => {
       <ArrowUp className="w-5 h-5" />
     </button>
   );
-};
+});
+
+BackToTop.displayName = "BackToTop";
 
 export default BackToTop;
