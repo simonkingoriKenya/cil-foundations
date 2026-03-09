@@ -6,6 +6,10 @@ import ClientsSection from "@/components/ClientsSection";
 import AboutSection from "@/components/AboutSection";
 import TeamSection from "@/components/TeamSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import SafetySection from "@/components/SafetySection";
+import CertificationsSection from "@/components/CertificationsSection";
+import FAQSection from "@/components/FAQSection";
+import CTABanner from "@/components/CTABanner";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
@@ -31,9 +35,13 @@ const Index = () => {
         <ScrollSection><ServicesSection /></ScrollSection>
         <ScrollSection><MethodologySection /></ScrollSection>
         <ScrollSection><ProjectsSection /></ScrollSection>
+        <CTABanner />
+        <ScrollSection><SafetySection /></ScrollSection>
+        <ScrollSection><CertificationsSection /></ScrollSection>
         <ScrollSection><ClientsSection /></ScrollSection>
         <ScrollSection><TestimonialsSection /></ScrollSection>
         <ScrollSection><TeamSection /></ScrollSection>
+        <ScrollSection><FAQSection /></ScrollSection>
         <ScrollSection><ContactSection /></ScrollSection>
       </main>
       <Footer />
