@@ -68,7 +68,7 @@ const processes = [
 ];
 
 const MethodologySection = () => (
-  <section className="py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+  <section className="py-32 bg-gradient-to-br from-slate-dark via-steel to-slate-dark relative overflow-hidden">
     {/* Background Pattern */}
     <div className="absolute inset-0 opacity-5">
       <div className="absolute inset-0" style={{
