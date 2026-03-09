@@ -191,7 +191,7 @@ const HeroSection = () => {
             <p className="text-slate-dark-foreground/60 text-xs">Regional Coverage</p>
           </div>
           <div>
-            <p className="font-heading font-bold text-2xl text-primary">Full Scope</p>
+            <p className="font-heading font-bold text-2xl text-gold">Full Scope</p>
             <p className="text-slate-dark-foreground/60 text-xs">Building & Civil</p>
           </div>
         </div>
