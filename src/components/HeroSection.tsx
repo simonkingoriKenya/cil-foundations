@@ -138,7 +138,7 @@ const HeroSection = () => {
         <div className="max-w-2xl">
           <p
             key={`sub-${current}`}
-            className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-4 animate-fade-up"
+            className="text-gold font-heading font-semibold text-sm tracking-widest uppercase mb-4 animate-fade-up"
           >
             {slide.subtitle}
           </p>
