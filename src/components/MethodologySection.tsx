@@ -138,10 +138,10 @@ const MethodologySection = () => (
                   </p>
 
                   <div className="mt-4 lg:mt-6 flex items-center space-x-2">
-                    <div className="flex-1 h-1 bg-white/20 rounded-full overflow-hidden">
+                    <div className="flex-1 h-1 bg-slate-dark-foreground/20 rounded-full overflow-hidden">
                       <div className={`h-full bg-gradient-to-r ${process.color} rounded-full animate-pulse`} style={{width: `${((idx + 1) / processes.length) * 100}%`}} />
                     </div>
-                    <ChevronRight className={`w-4 h-4 text-white/60 ${idx % 2 === 0 ? 'lg:rotate-180' : ''}`} />
+                    <ChevronRight className={`w-4 h-4 text-slate-dark-foreground/60 ${idx % 2 === 0 ? 'lg:rotate-180' : ''}`} />
                   </div>
                 </div>
               </div>
