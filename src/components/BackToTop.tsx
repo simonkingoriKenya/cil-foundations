@@ -21,6 +21,8 @@ const BackToTop = forwardRef<HTMLButtonElement>((_, ref) => {
       <ArrowUp className="w-5 h-5" />
     </button>
   );
-};
+});
+
+BackToTop.displayName = "BackToTop";
 
 export default BackToTop;

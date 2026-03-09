@@ -11,6 +11,8 @@ const WhatsAppButton = forwardRef<HTMLAnchorElement>((_, ref) => (
   >
     <MessageCircle className="w-7 h-7" />
   </a>
-);
+));
+
+WhatsAppButton.displayName = "WhatsAppButton";
 
 export default WhatsAppButton;
