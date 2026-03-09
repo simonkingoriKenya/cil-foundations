@@ -75,7 +75,7 @@ const TestimonialsSection = () => {
             <p className="font-heading font-bold text-slate-dark-foreground text-base">
               {t.name}
             </p>
-            <p className="text-primary text-sm font-medium">{t.title}</p>
+            <p className="text-gold text-sm font-medium">{t.title}</p>
             <p className="text-slate-dark-foreground/50 text-sm">{t.company} — {t.project}</p>
           </div>
         </div>
