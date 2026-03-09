@@ -62,7 +62,7 @@ const TestimonialsSection = () => {
 
         <div className="max-w-3xl mx-auto text-center">
           <div className="mb-8">
-            <Quote className="w-12 h-12 text-primary/40 mx-auto mb-6" />
+            <Quote className="w-12 h-12 text-gold/40 mx-auto mb-6" />
             <p
               key={active}
               className="text-slate-dark-foreground/85 text-lg sm:text-xl leading-relaxed italic animate-fade-in"
