@@ -129,11 +129,11 @@ const MethodologySection = () => (
                     <process.icon className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-white" />
                   </div>
 
-                  <h3 className="font-heading font-bold text-base md:text-lg lg:text-xl text-white mb-2 lg:mb-4">
+                  <h3 className="font-heading font-bold text-base md:text-lg lg:text-xl text-slate-dark-foreground mb-2 lg:mb-4">
                     {process.title}
                   </h3>
 
-                  <p className="text-slate-300 leading-relaxed text-sm md:text-base">
+                  <p className="text-slate-dark-foreground/70 leading-relaxed text-sm md:text-base">
                     {process.description}
                   </p>
 
