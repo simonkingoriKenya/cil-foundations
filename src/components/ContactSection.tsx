@@ -91,8 +91,8 @@ const ContactSection = () => {
               <div className="bg-green-50 border border-green-200 rounded-lg p-3 md:p-4 flex items-start gap-2 md:gap-3 mb-4 md:mb-6">
                 <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-600 shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold text-green-900 text-sm">Email Received!</p>
-                  <p className="text-xs md:text-sm text-green-800">Thank you for your inquiry. We will get back to you within 24 hours.</p>
+                  <p className="font-semibold text-green-900 text-sm">Email Client Opened!</p>
+                  <p className="text-xs md:text-sm text-green-800">Your email client should have opened with the quote details pre-filled. Please review and hit send.</p>
                 </div>
               </div>
             )}
