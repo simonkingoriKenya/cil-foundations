@@ -8,12 +8,10 @@ const CONTACT_EMAIL = "info@castleworks.co.ke";
 
 const ContactSection = () => {
   const formRef = useRef<HTMLFormElement>(null);
-  const [isLoading, setIsLoading] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsLoading(true);
 
     const form = e.target as HTMLFormElement;
     const data = new FormData(form);
@@ -23,34 +21,16 @@ const ContactSection = () => {
     const projectType = data.get("projectType") as string;
     const details = data.get("details") as string;
 
-    try {
-      const response = await fetch("/api/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          phone,
-          email,
-          projectType,
-          details,
-        }),
-      });
+    const subject = encodeURIComponent(`Quote Request: ${projectType}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nProject Type: ${projectType}\n\nProject Details:\n${details}`
+    );
 
-      if (response.ok) {
-        setShowSuccess(true);
-        form.reset();
-        setTimeout(() => setShowSuccess(false), 5000);
-      } else {
-        alert("Failed to send email. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error sending email:", error);
-      alert("An error occurred. Please try again or contact us directly.");
-    } finally {
-      setIsLoading(false);
-    }
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+
+    setShowSuccess(true);
+    form.reset();
+    setTimeout(() => setShowSuccess(false), 5000);
   };
 
   return (
