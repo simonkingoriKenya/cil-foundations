@@ -118,8 +118,8 @@ const ContactSection = () => {
               <label className="text-xs md:text-sm font-medium text-foreground mb-1.5 block">Project Details</label>
               <Textarea name="details" required rows={4} placeholder="Describe your project scope, location, and timeline..." className="bg-background resize-none text-sm" />
             </div>
-            <Button type="submit" variant="steel" size="lg" className="w-full text-sm md:text-base h-10 md:h-auto" disabled={isLoading}>
-              {isLoading ? "Sending..." : "Submit Quote Request"}
+            <Button type="submit" variant="steel" size="lg" className="w-full text-sm md:text-base h-10 md:h-auto">
+              Send Quote Request
             </Button>
           </form>
         </div>
