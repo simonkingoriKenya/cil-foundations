@@ -14,7 +14,7 @@ const CTABanner = () => (
       <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
         <div className="text-center lg:text-left">
           <h2 className="font-heading font-bold text-3xl sm:text-4xl text-steel-foreground mb-3">
-            Ready to Start Your Project?
+            Discuss Your Next Project
           </h2>
           <p className="text-steel-foreground/70 text-lg max-w-xl">
             From concept to completion — let's build something exceptional together. Get a detailed quote within 48 hours.

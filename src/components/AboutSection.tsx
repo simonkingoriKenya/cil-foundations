@@ -32,42 +32,42 @@ const expertise = [
 ];
 
 const AboutSection = () => (
-  <section id="about" className="py-32 bg-background">
+  <section id="about" className="py-12 md:py-20 lg:py-32 bg-background">
     <div className="container mx-auto px-4">
-      <div className="text-center mb-20">
-        <p className="text-gold font-heading font-semibold text-sm tracking-widest uppercase mb-4">
+      <div className="text-center mb-8 md:mb-12 lg:mb-20">
+        <p className="text-gold font-heading font-semibold text-xs md:text-sm tracking-widest uppercase mb-3 md:mb-4">
           Our Story
         </p>
-        <h2 className="font-heading font-bold text-4xl sm:text-5xl text-foreground mb-6">
+        <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-foreground mb-3 md:mb-6">
           Building East Africa's Foundation
         </h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
+        <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base lg:text-lg leading-relaxed">
           CIL Contractors Ltd stands as a beacon of quality, innovation, and reliability in East African construction and civil engineering.
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+      <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center mb-8 md:mb-12 lg:mb-20">
         <div>
           <div className="space-y-6">
             <div>
-              <h3 className="font-heading font-bold text-2xl text-foreground mb-3">Who We Are</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <h3 className="font-heading font-bold text-lg md:text-xl lg:text-2xl text-foreground mb-2 md:mb-3">Who We Are</h3>
+              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                 CIL Contractors Ltd transforms the East African skyline through a philosophy where the best need not be expensive. From intricate foundations to soaring heights, every project is approached as a landmark — built not just to stand, but to inspire.
               </p>
             </div>
             <div>
-              <h3 className="font-heading font-bold text-2xl text-foreground mb-3">Our Scope</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <h3 className="font-heading font-bold text-lg md:text-xl lg:text-2xl text-foreground mb-2 md:mb-3">Our Scope</h3>
+              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                 Beyond vertical construction, we master comprehensive civil engineering — managing water reticulation, sewerage treatment, storm water drainage, heavy equipment installations, and road construction across Kenya and the broader East African region.
               </p>
             </div>
             <div>
-              <h3 className="font-heading font-bold text-2xl text-foreground mb-3">Our Commitment</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <h3 className="font-heading font-bold text-lg md:text-xl lg:text-2xl text-foreground mb-2 md:mb-3">Our Commitment</h3>
+              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                 We believe in delivering excellence through discipline, innovation, and unwavering commitment to our clients. Every brick, every calculation, every hour reflects our dedication to building a better East Africa.
               </p>
             </div>
-            <Button size="lg" asChild className="mt-6">
+            <Button size="lg" asChild className="mt-6 bg-yellow-400 hover:bg-yellow-500 text-black">
               <a
                 href="https://drive.google.com/uc?export=download&id=1BXq07Pdmkn1rVyV2yAfggNNPVrRlwwSz"
                 target="_blank"
@@ -81,10 +81,10 @@ const AboutSection = () => (
         </div>
 
         <div className="grid grid-cols-2 gap-6">
-          <AnimatedStat number={500} label="Projects Completed" suffix="+" />
+          <AnimatedStat number={100} label="Projects Completed" suffix="+" />
           <AnimatedStat number={15} label="Years of Excellence" suffix="+" />
-          <AnimatedStat number={6} label="Countries Served" />
-          <AnimatedStat number={100} label="Client Satisfaction" suffix="%" />
+          <AnimatedStat number={3} label="Countries Served" />
+          <AnimatedStat number={99} label="Customer Satisfaction" suffix="%" />
         </div>
       </div>
 

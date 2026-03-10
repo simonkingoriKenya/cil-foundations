@@ -39,35 +39,35 @@ const certifications = [
 ];
 
 const CertificationsSection = () => (
-  <section className="py-24 bg-background">
+  <section className="py-12 md:py-20 lg:py-24 bg-background">
     <div className="container mx-auto px-4">
-      <div className="text-center mb-16">
-        <p className="text-gold font-heading font-semibold text-sm tracking-widest uppercase mb-3">
+      <div className="text-center mb-8 md:mb-12 lg:mb-16">
+        <p className="text-gold font-heading font-semibold text-xs md:text-sm tracking-widest uppercase mb-3">
           Accreditations & Standards
         </p>
-        <h2 className="font-heading font-bold text-3xl sm:text-4xl text-foreground mb-4">
+        <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-foreground mb-3 md:mb-4">
           Certified for Excellence
         </h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
           Our certifications and registrations reflect our commitment to quality, safety, and environmental responsibility across every project we undertake.
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {certifications.map((cert) => (
           <div
             key={cert.title}
-            className="group bg-card border border-border rounded-xl p-8 hover:border-primary/50 hover:shadow-xl transition-all duration-300 relative overflow-hidden"
+            className="group bg-card border border-border rounded-xl p-4 md:p-6 lg:p-8 hover:border-primary/50 hover:shadow-xl transition-all duration-300 relative overflow-hidden"
           >
-            <div className="absolute top-4 right-4 bg-primary/10 text-primary font-heading font-bold text-xs px-3 py-1 rounded-full">
+            <div className="absolute top-3 md:top-4 right-3 md:right-4 bg-primary/10 text-primary font-heading font-bold text-[10px] md:text-xs px-2 md:px-3 py-1 rounded-full">
               {cert.badge}
             </div>
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/15 transition-colors">
-              <cert.icon className="w-6 h-6 text-primary" />
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-3 md:mb-5 group-hover:bg-primary/15 transition-colors">
+              <cert.icon className="w-5 h-5 md:w-6 md:h-6 text-primary" />
             </div>
-            <h3 className="font-heading font-bold text-foreground text-lg mb-1">{cert.title}</h3>
-            <p className="text-primary text-sm font-medium mb-3">{cert.category}</p>
-            <p className="text-muted-foreground text-sm leading-relaxed">{cert.detail}</p>
+            <h3 className="font-heading font-bold text-foreground text-base md:text-lg mb-1">{cert.title}</h3>
+            <p className="text-primary text-xs md:text-sm font-medium mb-2 md:mb-3">{cert.category}</p>
+            <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">{cert.detail}</p>
           </div>
         ))}
       </div>

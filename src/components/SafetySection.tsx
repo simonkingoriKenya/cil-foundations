@@ -17,16 +17,16 @@ const commitments = [
 ];
 
 const SafetySection = () => (
-  <section className="py-24 bg-gradient-to-b from-background to-muted/30">
+  <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-background to-muted/30">
     <div className="container mx-auto px-4">
-      <div className="text-center mb-16">
-        <p className="text-gold font-heading font-semibold text-sm tracking-widest uppercase mb-3">
+      <div className="text-center mb-8 md:mb-12 lg:mb-16">
+        <p className="text-gold font-heading font-semibold text-xs md:text-sm tracking-widest uppercase mb-3">
           Health, Safety & Environment
         </p>
-        <h2 className="font-heading font-bold text-3xl sm:text-4xl text-foreground mb-4">
+        <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-foreground mb-3 md:mb-4">
           Safety Is Non-Negotiable
         </h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
           We believe every worker deserves to go home safe. Our HSE framework is embedded in every phase of construction — from planning through handover.
         </p>
       </div>

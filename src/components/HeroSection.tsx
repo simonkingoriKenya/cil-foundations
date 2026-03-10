@@ -7,7 +7,7 @@ const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About Us" },
   { href: "#services", label: "Services" },
-  { href: "#projects", label: "Projects" },
+  { href: "#projects", label: "Portfolio" },
   { href: "#contact", label: "Contact Us" },
 ];
 
@@ -40,9 +40,9 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-dark/95 backdrop-blur-sm">
-      <div className="container mx-auto flex items-center justify-between py-3 px-4">
+      <div className="container mx-auto flex items-center justify-between py-2 px-3 sm:py-3 sm:px-4">
         <div className="flex items-center gap-2">
-          <div className="w-12 h-12 sm:w-16 sm:h-16">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16">
             <img
               src="/logo.png"
               alt="CIL Contractors logo"
@@ -134,31 +134,31 @@ const HeroSection = () => {
         </div>
       ))}
 
-      <div className="relative container mx-auto px-4 py-32">
+      <div className="relative container mx-auto px-4 py-12 md:py-20 lg:py-24">
         <div className="max-w-2xl">
           <p
             key={`sub-${current}`}
-            className="text-gold font-heading font-semibold text-sm tracking-widest uppercase mb-4 animate-fade-up"
+            className="text-gold font-heading font-semibold text-xs md:text-sm tracking-widest uppercase mb-2 md:mb-4 animate-fade-up"
           >
             {slide.subtitle}
           </p>
           <h1
             key={`title-${current}`}
-            className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-dark-foreground leading-[1.1] mb-6 animate-fade-up"
+            className="font-heading font-extrabold text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-slate-dark-foreground leading-[1.2] md:leading-[1.1] mb-3 md:mb-6 animate-fade-up"
           >
             {slide.title} <span className="text-gold">{slide.highlight}</span>
           </h1>
           <p
             key={`desc-${current}`}
-            className="text-slate-dark-foreground/75 text-lg max-w-lg mb-8 leading-relaxed animate-fade-up"
+            className="text-slate-dark-foreground/75 text-sm md:text-base lg:text-lg max-w-lg mb-4 md:mb-8 leading-relaxed animate-fade-up"
           >
             {slide.description}
           </p>
-          <div className="flex flex-wrap gap-4 animate-fade-up">
-            <Button variant="hero" size="lg" asChild>
+          <div className="flex flex-wrap gap-2 md:gap-4 animate-fade-up">
+            <Button variant="hero" size="sm" className="md:size-lg" asChild>
               <a href="#contact">Request a Quote</a>
             </Button>
-            <Button variant="hero-outline" size="lg" asChild>
+            <Button variant="hero-outline" size="sm" className="md:size-lg" asChild>
               <a href="#services">Our Services</a>
             </Button>
           </div>
@@ -181,18 +181,18 @@ const HeroSection = () => {
 
       {/* Bottom stats bar */}
       <div className="absolute bottom-0 left-0 right-0 bg-slate-dark/80 backdrop-blur-sm border-t border-slate-dark-foreground/10">
-        <div className="container mx-auto px-4 py-4 grid grid-cols-3 gap-4 text-center">
+        <div className="container mx-auto px-4 py-2 md:py-4 grid grid-cols-3 gap-2 md:gap-4 text-center">
           <div>
-            <p className="font-heading font-bold text-2xl text-gold">24/7</p>
-            <p className="text-slate-dark-foreground/60 text-xs">Availability</p>
+            <p className="font-heading font-bold text-lg md:text-2xl text-gold">24/7</p>
+            <p className="text-slate-dark-foreground/60 text-[10px] md:text-xs">Availability</p>
           </div>
           <div>
-            <p className="font-heading font-bold text-2xl text-gold">East Africa</p>
-            <p className="text-slate-dark-foreground/60 text-xs">Regional Coverage</p>
+            <p className="font-heading font-bold text-lg md:text-2xl text-gold">East Africa</p>
+            <p className="text-slate-dark-foreground/60 text-[10px] md:text-xs">Regional Coverage</p>
           </div>
           <div>
-            <p className="font-heading font-bold text-2xl text-gold">Full Scope</p>
-            <p className="text-slate-dark-foreground/60 text-xs">Building & Civil</p>
+            <p className="font-heading font-bold text-lg md:text-2xl text-gold">Full Scope</p>
+            <p className="text-slate-dark-foreground/60 text-[10px] md:text-xs">Building & Civil</p>
           </div>
         </div>
       </div>
