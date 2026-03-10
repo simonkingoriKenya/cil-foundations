@@ -8,12 +8,10 @@ const CONTACT_EMAIL = "info@castleworks.co.ke";
 
 const ContactSection = () => {
   const formRef = useRef<HTMLFormElement>(null);
-  const [isLoading, setIsLoading] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsLoading(true);
 
     const form = e.target as HTMLFormElement;
     const data = new FormData(form);
@@ -23,34 +21,16 @@ const ContactSection = () => {
     const projectType = data.get("projectType") as string;
     const details = data.get("details") as string;
 
-    try {
-      const response = await fetch("/api/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          phone,
-          email,
-          projectType,
-          details,
-        }),
-      });
+    const subject = encodeURIComponent(`Quote Request: ${projectType}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nProject Type: ${projectType}\n\nProject Details:\n${details}`
+    );
 
-      if (response.ok) {
-        setShowSuccess(true);
-        form.reset();
-        setTimeout(() => setShowSuccess(false), 5000);
-      } else {
-        alert("Failed to send email. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error sending email:", error);
-      alert("An error occurred. Please try again or contact us directly.");
-    } finally {
-      setIsLoading(false);
-    }
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+
+    setShowSuccess(true);
+    form.reset();
+    setTimeout(() => setShowSuccess(false), 5000);
   };
 
   return (
@@ -111,8 +91,8 @@ const ContactSection = () => {
               <div className="bg-green-50 border border-green-200 rounded-lg p-3 md:p-4 flex items-start gap-2 md:gap-3 mb-4 md:mb-6">
                 <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-600 shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold text-green-900 text-sm">Email Received!</p>
-                  <p className="text-xs md:text-sm text-green-800">Thank you for your inquiry. We will get back to you within 24 hours.</p>
+                  <p className="font-semibold text-green-900 text-sm">Email Client Opened!</p>
+                  <p className="text-xs md:text-sm text-green-800">Your email client should have opened with the quote details pre-filled. Please review and hit send.</p>
                 </div>
               </div>
             )}
@@ -138,8 +118,8 @@ const ContactSection = () => {
               <label className="text-xs md:text-sm font-medium text-foreground mb-1.5 block">Project Details</label>
               <Textarea name="details" required rows={4} placeholder="Describe your project scope, location, and timeline..." className="bg-background resize-none text-sm" />
             </div>
-            <Button type="submit" variant="steel" size="lg" className="w-full text-sm md:text-base h-10 md:h-auto" disabled={isLoading}>
-              {isLoading ? "Sending..." : "Submit Quote Request"}
+            <Button type="submit" variant="steel" size="lg" className="w-full text-sm md:text-base h-10 md:h-auto">
+              Send Quote Request
             </Button>
           </form>
         </div>
