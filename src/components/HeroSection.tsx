@@ -60,9 +60,9 @@ const Navbar = () => {
           ))}
         </div>
         <div className="flex items-center gap-3">
-          <a href="tel:+254788281815" className="hidden sm:flex items-center gap-1.5 text-slate-dark-foreground/70 text-xs">
+          <a href="tel:+254788281815" className="flex items-center gap-1.5 text-slate-dark-foreground/70 text-xs">
             <Phone className="w-3.5 h-3.5" />
-            +254 788 281 815
+            <span className="hidden sm:inline">+254 788 281 815</span>
           </a>
           <Button variant="hero" size="sm" asChild className="hidden sm:inline-flex">
             <a href="#contact">Get Quote</a>
@@ -183,8 +183,8 @@ const HeroSection = () => {
       <div className="absolute bottom-0 left-0 right-0 bg-slate-dark/80 backdrop-blur-sm border-t border-slate-dark-foreground/10">
         <div className="container mx-auto px-4 py-2 md:py-4 grid grid-cols-3 gap-2 md:gap-4 text-center">
           <div>
-            <p className="font-heading font-bold text-lg md:text-2xl text-gold">24/7</p>
-            <p className="text-slate-dark-foreground/60 text-[10px] md:text-xs">Availability</p>
+            <p className="font-heading font-bold text-lg md:text-2xl text-gold">15+</p>
+            <p className="text-slate-dark-foreground/60 text-[10px] md:text-xs">Years Experience</p>
           </div>
           <div>
             <p className="font-heading font-bold text-lg md:text-2xl text-gold">East Africa</p>

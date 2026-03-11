@@ -4,7 +4,7 @@ const WhatsAppButton = () => (
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Chat on WhatsApp"
-    className="fixed bottom-20 right-5 z-40 w-12 h-12 rounded-full bg-[#25D366] text-white shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-xl"
+    className="fixed bottom-[4.5rem] right-5 z-40 w-12 h-12 rounded-full bg-[#25D366] text-white shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-xl"
   >
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-7 h-7" fill="white">
       <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958A15.905 15.905 0 0016.004 32C24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.31 22.594c-.39 1.1-1.932 2.014-3.164 2.28-.844.18-1.946.324-5.66-1.216-4.748-1.97-7.806-6.78-8.04-7.094-.226-.314-1.892-2.52-1.892-4.808s1.198-3.41 1.622-3.876c.424-.466.926-.582 1.234-.582.308 0 .616.002.886.016.284.014.666-.108 1.042.794.39.934 1.326 3.228 1.44 3.462.116.234.192.508.038.82-.154.314-.23.508-.462.784-.23.276-.486.616-.694.826-.23.234-.47.488-.202.958.27.47 1.198 1.978 2.572 3.204 1.766 1.576 3.254 2.064 3.724 2.296.468.234.742.196 1.014-.116.276-.314 1.174-1.37 1.486-1.838.314-.468.624-.39 1.054-.234.43.156 2.724 1.286 3.192 1.52.468.234.778.35.894.544.114.194.114 1.128-.276 2.228z"/>
