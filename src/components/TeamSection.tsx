@@ -6,7 +6,7 @@ const team = [
     role: "Engineering Technical Lead",
     bio: "Drives technical excellence in engineering solutions, overseeing structural integrity, design compliance, and on-site technical supervision across all projects.",
     initials: "GK",
-    photo: "/Georg.png",
+    photo: "/George-new.jpeg",
   },
   {
     name: "Tirus Kagiri",
