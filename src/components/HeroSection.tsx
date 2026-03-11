@@ -60,9 +60,9 @@ const Navbar = () => {
           ))}
         </div>
         <div className="flex items-center gap-3">
-          <a href="tel:+254788281815" className="hidden sm:flex items-center gap-1.5 text-slate-dark-foreground/70 text-xs">
+          <a href="tel:+254788281815" className="flex items-center gap-1.5 text-slate-dark-foreground/70 text-xs">
             <Phone className="w-3.5 h-3.5" />
-            +254 788 281 815
+            <span className="hidden sm:inline">+254 788 281 815</span>
           </a>
           <Button variant="hero" size="sm" asChild className="hidden sm:inline-flex">
             <a href="#contact">Get Quote</a>
