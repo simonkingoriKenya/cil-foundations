@@ -13,7 +13,7 @@ const team = [
     role: "Operations Manager",
     bio: "Oversees day-to-day site operations, coordinating teams and resources to maintain seamless project execution across East Africa.",
     initials: "TK",
-    photo: "/kagiri.jpg",
+    photo: "/kagiri-new.png",
   },
   {
     name: "Ndiba",
