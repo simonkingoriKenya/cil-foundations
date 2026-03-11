@@ -34,7 +34,7 @@ const team = [
     role: "ICT Consultant",
     bio: "Provides strategic ICT infrastructure solutions and digital transformation guidance, ensuring seamless technology integration across company operations.",
     initials: "KV",
-    photo: "/Kevin.png",
+    photo: "/kevin-new.jpeg",
   },
   {
     name: "Ms Mokeira",
