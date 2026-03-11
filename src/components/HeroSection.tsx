@@ -183,8 +183,8 @@ const HeroSection = () => {
       <div className="absolute bottom-0 left-0 right-0 bg-slate-dark/80 backdrop-blur-sm border-t border-slate-dark-foreground/10">
         <div className="container mx-auto px-4 py-2 md:py-4 grid grid-cols-3 gap-2 md:gap-4 text-center">
           <div>
-            <p className="font-heading font-bold text-lg md:text-2xl text-gold">24/7</p>
-            <p className="text-slate-dark-foreground/60 text-[10px] md:text-xs">Availability</p>
+            <p className="font-heading font-bold text-lg md:text-2xl text-gold">15+</p>
+            <p className="text-slate-dark-foreground/60 text-[10px] md:text-xs">Years Experience</p>
           </div>
           <div>
             <p className="font-heading font-bold text-lg md:text-2xl text-gold">East Africa</p>

@@ -59,7 +59,7 @@ const Index = () => {
       <Footer />
       <BackToTop />
       <WhatsAppButton />
-      <MobileFloatingCTA />
+      
     </>
   );
 };
