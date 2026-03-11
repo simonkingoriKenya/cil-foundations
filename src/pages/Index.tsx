@@ -16,7 +16,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import MobileFloatingCTA from "@/components/MobileFloatingCTA";
+
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const ScrollSection = ({ children }: { children: React.ReactNode }) => {
