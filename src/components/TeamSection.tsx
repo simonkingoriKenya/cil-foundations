@@ -6,14 +6,14 @@ const team = [
     role: "Engineering Technical Lead",
     bio: "Drives technical excellence in engineering solutions, overseeing structural integrity, design compliance, and on-site technical supervision across all projects.",
     initials: "GK",
-    photo: "/Georg.png",
+    photo: "/George-new.jpeg",
   },
   {
     name: "Tirus Kagiri",
     role: "Operations Manager",
     bio: "Oversees day-to-day site operations, coordinating teams and resources to maintain seamless project execution across East Africa.",
     initials: "TK",
-    photo: "/kagiri.jpg",
+    photo: "/kagiri-new.png",
   },
   {
     name: "Ndiba",
@@ -34,7 +34,7 @@ const team = [
     role: "ICT Consultant",
     bio: "Provides strategic ICT infrastructure solutions and digital transformation guidance, ensuring seamless technology integration across company operations.",
     initials: "KV",
-    photo: "/Kevin.png",
+    photo: "/kevin-new.jpeg",
   },
   {
     name: "Ms Mokeira",
@@ -66,7 +66,7 @@ const TeamSection = () => (
             key={member.name}
             className="group bg-card border border-border rounded-xl p-4 md:p-6 lg:p-7 text-center hover:border-primary/50 hover:shadow-xl transition-all duration-300 overflow-hidden"
           >
-            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full bg-gradient-to-br from-slate-200 to-slate-100 dark:from-slate-700 dark:to-slate-600 border-2 border-slate-300 dark:border-slate-600 flex items-center justify-center mx-auto mb-4 md:mb-5 group-hover:border-primary/60 transition-colors overflow-hidden shadow-md">
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl bg-gradient-to-br from-slate-200 to-slate-100 dark:from-slate-700 dark:to-slate-600 border-2 border-slate-300 dark:border-slate-600 flex items-center justify-center mx-auto mb-4 md:mb-5 group-hover:border-primary/60 transition-colors overflow-hidden shadow-md">
               <img
                 src={member.photo}
                 alt={member.name}
