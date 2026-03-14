@@ -68,7 +68,7 @@ const TeamMemberModal = ({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto p-0 gap-0">
         <div className="relative">
-          <div className="w-full aspect-[4/3] overflow-hidden rounded-t-lg">
+          <div className="w-full aspect-[3/4] overflow-hidden rounded-t-lg">
             <img
               src={member.photo}
               alt={member.name}
