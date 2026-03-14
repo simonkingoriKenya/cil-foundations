@@ -68,11 +68,11 @@ const TeamMemberModal = ({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto p-0 gap-0">
         <div className="relative">
-          <div className="w-full aspect-[3/4] overflow-hidden rounded-t-lg">
+          <div className="w-full max-h-[40vh] overflow-hidden rounded-t-lg flex items-center justify-center bg-muted">
             <img
               src={member.photo}
               alt={member.name}
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-contain"
             />
           </div>
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-16">
@@ -99,6 +99,7 @@ const TeamMemberModal = ({
 const TeamSection = () => {
   const [selectedMember, setSelectedMember] = useState<typeof team[0] | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [zoomedAward, setZoomedAward] = useState(false);
 
   const handleOpenModal = (member: typeof team[0]) => {
     setSelectedMember(member);
@@ -154,7 +155,8 @@ const TeamSection = () => {
           <img
             src="/award.jpeg"
             alt="Bamburi Cement Certificate of Appreciation awarded to CIL Contractors Ltd for Exceptional Retail Performance - Nairobi North 2021"
-            className="w-64 rounded-lg shadow-lg"
+            className="w-64 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+            onClick={() => setZoomedAward(true)}
           />
           <div>
             <div className="flex items-center gap-2 mb-3">
@@ -180,6 +182,16 @@ const TeamSection = () => {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />
+
+      <Dialog open={zoomedAward} onOpenChange={setZoomedAward}>
+        <DialogContent className="max-w-4xl p-2 bg-background">
+          <img
+            src="/award.jpeg"
+            alt="Bamburi Cement Certificate of Appreciation"
+            className="w-full h-auto rounded-lg"
+          />
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
