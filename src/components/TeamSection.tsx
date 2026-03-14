@@ -99,6 +99,7 @@ const TeamMemberModal = ({
 const TeamSection = () => {
   const [selectedMember, setSelectedMember] = useState<typeof team[0] | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [zoomedAward, setZoomedAward] = useState(false);
 
   const handleOpenModal = (member: typeof team[0]) => {
     setSelectedMember(member);
