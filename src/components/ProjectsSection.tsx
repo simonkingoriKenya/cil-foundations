@@ -75,6 +75,18 @@ const projectCategories = {
     { image: "/ICT3.jpeg", title: "ICT Infrastructure Project 3", category: "ICT Infrastructure Works" },
     { image: "/ICT4.jpeg", title: "ICT Infrastructure Project 4", category: "ICT Infrastructure Works" },
   ],
+  "interior-fitouts": [
+    { image: "/interior-1.jpg", title: "Custom Wardrobes & Joinery", category: "Interior Fit Outs" },
+    { image: "/interior-2.jpg", title: "Modern Kitchen Design", category: "Interior Fit Outs" },
+    { image: "/interior-3.jpg", title: "Premium Kitchen Fit Out", category: "Interior Fit Outs" },
+    { image: "/interior-4.jpg", title: "Contemporary Kitchen Island", category: "Interior Fit Outs" },
+    { image: "/interior-5.jpg", title: "Sleek Kitchen Installation", category: "Interior Fit Outs" },
+    { image: "/interior-6.jpg", title: "Luxury Kitchen & Dining", category: "Interior Fit Outs" },
+    { image: "/interior-7.jpg", title: "Built-In Wardrobe Systems", category: "Interior Fit Outs" },
+    { image: "/interior-8.jpg", title: "Living Room Interior", category: "Interior Fit Outs" },
+    { image: "/interior-9.jpg", title: "Modern Kitchen Finishes", category: "Interior Fit Outs" },
+    { image: "/interior-10.jpg", title: "Bedroom Interior Design", category: "Interior Fit Outs" },
+  ],
 };
 
 import { useState } from "react";
@@ -115,6 +127,7 @@ const ProjectsSection = () => {
             <TabsTrigger value="water-works" className="text-xs md:text-sm whitespace-nowrap px-2 md:px-4">Water Works</TabsTrigger>
             <TabsTrigger value="energy" className="text-xs md:text-sm whitespace-nowrap px-2 md:px-4">Energy</TabsTrigger>
             <TabsTrigger value="ict-infrastructure" className="text-xs md:text-sm whitespace-nowrap px-2 md:px-4">ICT Infrastructure</TabsTrigger>
+            <TabsTrigger value="interior-fitouts" className="text-xs md:text-sm whitespace-nowrap px-2 md:px-4">Interior Fit Outs</TabsTrigger>
           </TabsList>
           {Object.entries(projectCategories).map(([key, projects]) => {
             const images = projects.map((p) => p.image);
