@@ -154,7 +154,8 @@ const TeamSection = () => {
           <img
             src="/award.jpeg"
             alt="Bamburi Cement Certificate of Appreciation awarded to CIL Contractors Ltd for Exceptional Retail Performance - Nairobi North 2021"
-            className="w-64 rounded-lg shadow-lg"
+            className="w-64 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+            onClick={() => setZoomedAward(true)}
           />
           <div>
             <div className="flex items-center gap-2 mb-3">
