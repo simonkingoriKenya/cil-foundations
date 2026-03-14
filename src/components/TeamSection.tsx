@@ -182,6 +182,16 @@ const TeamSection = () => {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />
+
+      <Dialog open={zoomedAward} onOpenChange={setZoomedAward}>
+        <DialogContent className="max-w-4xl p-2 bg-background">
+          <img
+            src="/award.jpeg"
+            alt="Bamburi Cement Certificate of Appreciation"
+            className="w-full h-auto rounded-lg"
+          />
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
