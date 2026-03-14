@@ -127,6 +127,7 @@ const ProjectsSection = () => {
             <TabsTrigger value="water-works" className="text-xs md:text-sm whitespace-nowrap px-2 md:px-4">Water Works</TabsTrigger>
             <TabsTrigger value="energy" className="text-xs md:text-sm whitespace-nowrap px-2 md:px-4">Energy</TabsTrigger>
             <TabsTrigger value="ict-infrastructure" className="text-xs md:text-sm whitespace-nowrap px-2 md:px-4">ICT Infrastructure</TabsTrigger>
+            <TabsTrigger value="interior-fitouts" className="text-xs md:text-sm whitespace-nowrap px-2 md:px-4">Interior Fit Outs</TabsTrigger>
           </TabsList>
           {Object.entries(projectCategories).map(([key, projects]) => {
             const images = projects.map((p) => p.image);
